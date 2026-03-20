@@ -8,9 +8,7 @@ import { t } from "@/i18n/translations";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription, DialogClose } from "@/components/ui/dialog";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
-const ProjectCard = ({ project, index, onOpen, onClose }: { project: typeof t.projects.items.es[number] & { links?: readonly { readonly label: string; readonly url: string }[], images?: readonly string[], reels?: readonly string[] }; index: number; onOpen: () => void; onClose: () => void }) => {
-  const { lang } = useLanguage();
-  
+const ProjectGallery = ({ title, images, reels, lang }: { title?: string, images?: readonly string[], reels?: readonly string[], lang: string }) => {
   const [innerEmblaRef, innerEmblaApi] = useEmblaCarousel({ loop: true, align: "center", dragFree: true });
 
   const scrollPrev = useCallback(() => {
@@ -20,6 +18,81 @@ const ProjectCard = ({ project, index, onOpen, onClose }: { project: typeof t.pr
   const scrollNext = useCallback(() => {
     if (innerEmblaApi) innerEmblaApi.scrollNext();
   }, [innerEmblaApi]);
+
+  if ((!images || images.length === 0) && (!reels || reels.length === 0)) return null;
+
+  return (
+    <div className="mt-24 pt-16 border-t border-border/50 animate-fade-up" style={{ animationDelay: "300ms" }}>
+      <div className="flex flex-col md:flex-row items-center justify-between mb-10 gap-6">
+        <div>
+          <h4 className="font-display text-xl md:text-2xl font-bold uppercase tracking-widest text-foreground">
+            {title || (lang === "es" ? "Galería Multimedia" : "Media Gallery")}
+          </h4>
+          <p className="text-muted-foreground text-sm mt-2">
+            {lang === "es" ? "Desliza o usa las flechas para explorar" : "Swipe or use arrows to explore"}
+          </p>
+        </div>
+        
+        <div className="flex gap-4">
+          <button 
+            onClick={scrollPrev} 
+            className="bg-secondary hover:bg-coral text-foreground hover:text-white p-4 rounded-full transition-all shadow-sm hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-coral/50"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          <button 
+            onClick={scrollNext} 
+            className="bg-secondary hover:bg-coral text-foreground hover:text-white p-4 rounded-full transition-all shadow-sm hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-coral/50"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+        </div>
+      </div>
+      
+      <div className="relative rounded-3xl overflow-hidden bg-transparent select-none mt-2">
+        <div className="overflow-hidden cursor-grab active:cursor-grabbing py-8 md:py-12" ref={innerEmblaRef}>
+          <div className="flex -ml-6 md:-ml-12 items-center h-[55vh] md:h-[70vh]">
+            
+            {reels?.map((reel, idx) => (
+              <div className="flex-none h-full aspect-[9/16] relative pl-6 md:pl-12 group mix-blend-normal" key={`reel-${idx}`}>
+                <div className="w-full h-full rounded-2xl overflow-hidden shadow-2xl bg-black/5 ring-1 ring-white/10 transform transition-transform duration-700 group-hover:scale-[1.02]">
+                  <iframe 
+                    src={`${reel.replace(/\/?$/, '')}/embed`} 
+                    className="w-full h-full border-0 absolute inset-0 pointer-events-auto" 
+                    scrolling="no" 
+                    allowTransparency={true} 
+                    allowFullScreen={true}
+                    title={`Instagram Reel ${idx + 1}`}
+                  />
+                </div>
+              </div>
+            ))}
+
+            {images?.map((img, idx) => (
+              <div className="flex-none h-full relative pl-6 md:pl-12 group mix-blend-normal" key={`img-${idx}`}>
+                <div className="h-full rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 flex items-center justify-center transform transition-transform duration-700 group-hover:scale-[1.02] bg-charcoal/50">
+                  {img.endsWith('.mp4') ? (
+                    <video src={img} className="h-full w-auto max-w-none object-contain rounded-2xl pointer-events-none" autoPlay muted loop playsInline />
+                  ) : (
+                    <img 
+                      src={img} 
+                      alt={`Gallery media ${idx + 1}`} 
+                      className="h-full w-auto max-w-none object-contain rounded-2xl pointer-events-none"
+                    />
+                  )}
+                </div>
+              </div>
+            ))}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const ProjectCard = ({ project, index, onOpen, onClose }: { project: typeof t.projects.items.es[number] & { links?: readonly { readonly label: string; readonly url: string }[], images?: readonly string[], reels?: readonly string[], galleries?: readonly { title: string, images?: readonly string[], reels?: readonly string[] }[] }; index: number; onOpen: () => void; onClose: () => void }) => {
+  const { lang } = useLanguage();
 
   return (
     <Dialog onOpenChange={(open) => {
@@ -144,75 +217,13 @@ const ProjectCard = ({ project, index, onOpen, onClose }: { project: typeof t.pr
             </div>
           )}
 
-          {/* Galería Multimedia con Controles */}
-          {((project.images && project.images.length > 0) || (project.reels && project.reels.length > 0)) && (
-            <div className="mt-24 pt-16 border-t border-border/50 animate-fade-up" style={{ animationDelay: "300ms" }}>
-              
-              <div className="flex flex-col md:flex-row items-center justify-between mb-10 gap-6">
-                <div>
-                  <h4 className="font-display text-xl md:text-2xl font-bold uppercase tracking-widest text-foreground">
-                    {lang === "es" ? "Galería Multimedia" : "Media Gallery"}
-                  </h4>
-                  <p className="text-muted-foreground text-sm mt-2">
-                    {lang === "es" ? "Desliza o usa las flechas para explorar" : "Swipe or use arrows to explore"}
-                  </p>
-                </div>
-                
-                <div className="flex gap-4">
-                  <button 
-                    onClick={scrollPrev} 
-                    className="bg-secondary hover:bg-coral text-foreground hover:text-white p-4 rounded-full transition-all shadow-sm hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-coral/50"
-                  >
-                    <ChevronLeft className="w-6 h-6" />
-                  </button>
-                  <button 
-                    onClick={scrollNext} 
-                    className="bg-secondary hover:bg-coral text-foreground hover:text-white p-4 rounded-full transition-all shadow-sm hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-coral/50"
-                  >
-                    <ChevronRight className="w-6 h-6" />
-                  </button>
-                </div>
-              </div>
-              
-              <div className="relative rounded-3xl overflow-hidden bg-transparent select-none mt-2">
-                <div className="overflow-hidden cursor-grab active:cursor-grabbing py-8 md:py-12" ref={innerEmblaRef}>
-                  <div className="flex -ml-6 md:-ml-12 items-center h-[55vh] md:h-[70vh]">
-                    
-                    {project.reels?.map((reel, idx) => (
-                      <div className="flex-none h-full aspect-[9/16] relative pl-6 md:pl-12 group mix-blend-normal" key={`reel-${idx}`}>
-                        <div className="w-full h-full rounded-2xl overflow-hidden shadow-2xl bg-black/5 ring-1 ring-white/10 transform transition-transform duration-700 group-hover:scale-[1.02]">
-                          <iframe 
-                            src={`${reel.replace(/\/?$/, '')}/embed`} 
-                            className="w-full h-full border-0 absolute inset-0 pointer-events-auto" 
-                            scrolling="no" 
-                            allowTransparency={true} 
-                            allowFullScreen={true}
-                            title={`Instagram Reel ${idx + 1}`}
-                          />
-                        </div>
-                      </div>
-                    ))}
-
-                    {project.images?.map((img, idx) => (
-                      <div className="flex-none h-full relative pl-6 md:pl-12 group mix-blend-normal" key={`img-${idx}`}>
-                        <div className="h-full rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 flex items-center justify-center transform transition-transform duration-700 group-hover:scale-[1.02] bg-charcoal/50">
-                          {img.endsWith('.mp4') ? (
-                            <video src={img} className="h-full w-auto max-w-none object-contain rounded-2xl pointer-events-none" autoPlay muted loop playsInline />
-                          ) : (
-                            <img 
-                              src={img} 
-                              alt={`${project.title} media ${idx + 1}`} 
-                              className="h-full w-auto max-w-none object-contain rounded-2xl pointer-events-none"
-                            />
-                          )}
-                        </div>
-                      </div>
-                    ))}
-
-                  </div>
-                </div>
-              </div>
-            </div>
+          {/* Galerías Multimedia */}
+          {project.galleries ? (
+            project.galleries.map((gallery, idx) => (
+              <ProjectGallery key={idx} title={gallery.title} images={gallery.images} reels={gallery.reels} lang={lang} />
+            ))
+          ) : (
+            <ProjectGallery images={project.images} reels={project.reels} lang={lang} />
           )}
 
         </div>
