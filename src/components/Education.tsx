@@ -1,36 +1,25 @@
 import { ScrollReveal } from "./ScrollReveal";
-
-const timeline = [
-  { year: "2024 – Presente", title: "Comunicadora Integral", org: "Riverside Agency · Edhasa Argentina" },
-  { year: "2023 – 2024", title: "Especialista en Contenido", org: "WeloJets" },
-  { year: "2023 – Presente", title: "Community Manager Freelance", org: "Neterwalk · Yamaneat · Grupo Octubre · Festival Wateke" },
-  { year: "2022", title: "Producción y Comunicación", org: "Huinca Cine" },
-  { year: "2021", title: "Intercambio · Comunicación Audiovisual", org: "Universidad Carlos III de Madrid" },
-  { year: "2018 – 2021", title: "Lic. en Cs. de la Comunicación", org: "UADE · Buenos Aires" },
-  { year: "2021", title: "Cambridge Proficiency (C2)", org: "CEFR" },
-  { year: "2018", title: "JJ.OO. de la Juventud — Press Operations", org: "Buenos Aires 2018" },
-];
-
-const volunteer = [
-  { title: "Festival Solidario", desc: "Organización y difusión de eventos solidarios — comunicación aplicada a causas reales." },
-  { title: "Conduciendo a Conciencia", desc: "2014 – Presente · +12 años de concientización vial. No es un voluntariado — es un compromiso." },
-];
+import { useLanguage } from "@/i18n/LanguageContext";
+import { t } from "@/i18n/translations";
 
 export const Education = () => {
+  const { lang } = useLanguage();
+  const timeline = t.education.timeline[lang];
+  const volunteer = t.education.volunteer[lang];
+
   return (
     <section id="education" className="py-32 md:py-40 section-padding">
       <div className="max-w-6xl mx-auto">
         <ScrollReveal>
-          <p className="text-coral font-body text-sm uppercase tracking-[0.2em] mb-4">Formación</p>
+          <p className="text-coral font-body text-sm uppercase tracking-[0.2em] mb-4">{t.education.label[lang]}</p>
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold leading-tight max-w-3xl mb-16">
-            De dónde vengo
+            {t.education.heading[lang]}
           </h2>
         </ScrollReveal>
 
         <div className="grid md:grid-cols-2 gap-16">
-          {/* Timeline */}
           <div className="relative">
             <div className="absolute left-[7px] top-2 bottom-2 w-px bg-border" />
             <div className="space-y-8">
@@ -49,11 +38,10 @@ export const Education = () => {
             </div>
           </div>
 
-          {/* Volunteer */}
           <div>
             <ScrollReveal>
               <h3 className="font-display text-xl font-bold mb-8 text-foreground">
-                Fuera de lo profesional
+                {t.education.volunteerTitle[lang]}
               </h3>
             </ScrollReveal>
             <div className="space-y-6">
