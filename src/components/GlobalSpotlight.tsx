@@ -13,8 +13,25 @@ export const GlobalSpotlight = () => {
       if (!isVisible) setIsVisible(true);
     };
 
+    const handleTouchMove = (e: TouchEvent) => {
+      if (e.touches.length > 0) {
+        setMousePosition({
+          x: e.touches[0].clientX,
+          y: e.touches[0].clientY,
+        });
+        if (!isVisible) setIsVisible(true);
+      }
+    };
+
     window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    window.addEventListener("touchmove", handleTouchMove, { passive: true });
+    window.addEventListener("touchstart", handleTouchMove, { passive: true });
+    
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("touchmove", handleTouchMove);
+      window.removeEventListener("touchstart", handleTouchMove);
+    };
   }, [isVisible]);
 
   return (

@@ -151,22 +151,39 @@ export const t = {
           ]
         },
         {
-          number: "04", category: "Community Management · Freelance", title: "Neterwalk · Yamaneat · Grupo Octubre · Festival Wateke", role: "Community Manager Freelance · Marzo 2023 – Presente",
-          description: "Gestión simultánea de cuatro cuentas con identidades de marca distintas: calendarios editoriales, coberturas en vivo y piezas visuales a medida.",
+          number: "04", category: "Community Management · Freelance", title: "Yamaneat", role: "Community Manager Freelance · Marzo 2023 – Presente",
+          description: "Gestión estratégica de redes sociales, creación de contenido visual y planificación de calendarios editoriales a medida.",
           tasks: [
-            "Gestión simultánea de 4 cuentas con identidades de marca diferenciadas",
             "Planificación de calendarios editoriales mensuales",
-            "Cobertura en vivo de eventos y generación de contenido en tiempo real",
-            "Diseño de piezas visuales adaptadas a cada marca",
-            "Crecimientos del 20–40% en seguidores en cuentas activas",
+            "Cobertura en vivo de eventos y generación de contenido",
+            "Diseño de piezas visuales adaptadas a la marca",
+            "Crecimiento orgánico sostenido y community management activo",
           ],
-          challenge: "Mantener la coherencia de cuatro voces de marca distintas sin perder autenticidad ni eficiencia operativa.",
-          lesson: "La organización y los sistemas de trabajo son tan importantes como la creatividad para escalar la gestión de múltiples cuentas.",
-          quote: "Gestionar múltiples marcas enseña que cada comunidad tiene su lenguaje — y hay que hablarlo con propiedad.",
-          links: [{ label: "@neterwalk", url: "https://www.instagram.com/neterwalk" }],
+          challenge: "Mantener una voz de marca auténtica e impecable visualmente mientras se escala la producción de contenido.",
+          lesson: "La organización y los sistemas de trabajo son fundamentales para mantener la consistencia en el tiempo.",
+          quote: "Cada comunidad tiene su propio lenguaje, el desafío es hablarlo con creatividad y estrategia diaria.",
+          links: [{ label: "@yamaneat", url: "https://www.instagram.com/yamaneat" }],
+          images: [],
+          reels: []
         },
         {
-          number: "05", category: "Producción publicitaria · Sets", title: "Avon · Ron Don Q · Just", role: "Asistente de Producción Freelance · Diciembre 2021 – Presente",
+          number: "05", category: "Community Management · Freelance", title: "Neterwalk", role: "Community Manager Freelance · Marzo 2023 – Presente",
+          description: "Gestión de identidad digital, desarrollo de contenido visual diferencial y administración de la comunidad online.",
+          tasks: [
+            "Planificación de calendarios editoriales mensuales",
+            "Cobertura en vivo de eventos y ejecución de contenido en tiempo real",
+            "Diseño de grilla y piezas visuales exclusivas",
+            "Monitoreo de interacciones y crecimiento del 20–40% en seguidores",
+          ],
+          challenge: "Construir y mantener la coherencia visual y comunicacional de la marca destacando sus puntos fuertes en el entorno digital.",
+          lesson: "Entender el nicho exacto de la audiencia es el primer paso indispensable para cualquier estrategia exitosa.",
+          quote: "El manejo de comunidades no se trata solo de publicar en grillas, sino de escuchar, interpretar y conectar.",
+          links: [{ label: "@neterwalk", url: "https://www.instagram.com/neterwalk" }],
+          images: [],
+          reels: []
+        },
+        {
+          number: "06", category: "Producción publicitaria · Sets", title: "Avon · Ron Don Q · Just", role: "Asistente de Producción Freelance · Diciembre 2021 – Presente",
           description: "Coordinación logística en sets de producción publicitaria para marcas internacionales: soporte a dirección y articulación entre áreas técnicas.",
           tasks: [
             "Asistencia integral en sets de producción publicitaria",
@@ -256,22 +273,39 @@ export const t = {
           ]
         },
         {
-          number: "04", category: "Community Management · Freelance", title: "Neterwalk · Yamaneat · Grupo Octubre · Festival Wateke", role: "Freelance Community Manager · March 2023 – Present",
-          description: "Simultaneous management of four accounts with distinct brand identities: editorial calendars, live coverage and custom visual assets.",
+          number: "04", category: "Community Management · Freelance", title: "Yamaneat", role: "Freelance Community Manager · March 2023 – Present",
+          description: "Strategic social media management, visual content creation and custom editorial calendar planning.",
           tasks: [
-            "Simultaneous management of 4 accounts with differentiated brand identities",
             "Monthly editorial calendar planning",
-            "Live event coverage and real-time content creation",
-            "Custom visual assets tailored to each brand",
-            "20–40% follower growth across active accounts",
+            "Live event coverage and content generation",
+            "Custom visual assets tailored to the brand",
+            "Sustained organic growth and active community management",
           ],
-          challenge: "Maintaining the coherence of four distinct brand voices without sacrificing authenticity or operational efficiency.",
-          lesson: "Organization and workflow systems are as important as creativity when scaling multi-account management.",
-          quote: "Managing multiple brands teaches that every community has its own language — and it must be spoken with precision.",
-          links: [{ label: "@neterwalk", url: "https://www.instagram.com/neterwalk" }],
+          challenge: "Maintaining an authentic and visually flawless brand voice while scaling content production.",
+          lesson: "Organization and workflow systems are fundamental to maintaining consistency over time.",
+          quote: "Every community has its own language; the challenge is to speak it with daily strategy and creativity.",
+          links: [{ label: "@yamaneat", url: "https://www.instagram.com/yamaneat" }],
+          images: [],
+          reels: []
         },
         {
-          number: "05", category: "Advertising production · Sets", title: "Avon · Ron Don Q · Just", role: "Freelance Production Assistant · December 2021 – Present",
+          number: "05", category: "Community Management · Freelance", title: "Neterwalk", role: "Freelance Community Manager · March 2023 – Present",
+          description: "Digital identity management, differential visual content development and online community administration.",
+          tasks: [
+            "Monthly editorial calendar planning",
+            "Live event coverage and real-time content execution",
+            "Exclusive visual asset design and grid planning",
+            "Interaction monitoring and 20–40% follower growth",
+          ],
+          challenge: "Building and maintaining the visual and communicational coherence of the brand, highlighting its strengths in the digital ecosystem.",
+          lesson: "Understanding the exact niche of the audience is the indispensable first step for any successful strategy.",
+          quote: "Community management is not just about posting on grids, but about listening, interpreting, and connecting.",
+          links: [{ label: "@neterwalk", url: "https://www.instagram.com/neterwalk" }],
+          images: [],
+          reels: []
+        },
+        {
+          number: "06", category: "Advertising production · Sets", title: "Avon · Ron Don Q · Just", role: "Freelance Production Assistant · December 2021 – Present",
           description: "On-set logistics coordination for international brand advertising productions: directorial support and cross-department articulation.",
           tasks: [
             "Full production set assistance for advertising shoots",
