@@ -1,7 +1,7 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const brandsRow1 = ["WeloJets", "Edhasa Argentina", "Riverside Agency", "Huinca Cine", "Festival Wateke", "Neterwalk", "Grupo Octubre", "Página 12", "Min. de Turismo CABA"];
-const brandsRow2 = ["Avon", "Ron Don Q", "Just", "JJ.OO. Buenos Aires 2018", "Yamaneat", "UC3M Madrid"];
+const brandsRow2 = ["Avon", "Ron Don Q", "Just", "Yamaneat"];
 
 export const BrandMarquee = () => {
   const { lang } = useLanguage();

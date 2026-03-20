@@ -7,7 +7,7 @@ export const Skills = () => {
   const categories = t.skills.categories[lang];
 
   return (
-    <section id="skills" className="py-32 md:py-40 section-padding bg-card/50">
+    <section id="skills" className="py-32 md:py-40 section-padding">
       <div className="max-w-6xl mx-auto">
         <ScrollReveal>
           <p className="text-coral font-body text-sm uppercase tracking-[0.2em] mb-4">{t.skills.label[lang]}</p>

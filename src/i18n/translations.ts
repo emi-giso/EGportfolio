@@ -40,8 +40,8 @@ export const t = {
       en: "I value communication that solves real problems — not the kind that fills content calendars for the sake of it.",
     },
     p3: {
-      es: "Licenciada en Ciencias de la Comunicación (UADE), inglés C2 (Cambridge Proficiency), intercambio académico en Madrid (UC3M) e integrante del equipo de prensa en los Juegos Olímpicos de la Juventud Buenos Aires 2018.",
-      en: "Bachelor's degree in Communication Sciences (UADE), C2 English (Cambridge Proficiency), academic exchange in Madrid (UC3M), and member of the press operations team at the 2018 Buenos Aires Youth Olympic Games.",
+      es: "Licenciada en Ciencias de la Comunicación (UADE), inglés C2 (Cambridge Proficiency) e intercambio académico en Madrid (UC3M).",
+      en: "Bachelor's degree in Communication Sciences (UADE), C2 English (Cambridge Proficiency), and academic exchange in Madrid (UC3M).",
     },
     skills: {
       es: ["Estrategia digital", "Social media", "Producción audiovisual", "Prensa y RRPP", "Copywriting", "Meta Ads", "Bilingüe EN/ES (C2)"],
@@ -76,8 +76,8 @@ export const t = {
     items: {
       es: [
         {
-          number: "01", category: "Agencia creativa · Comunicación integral", title: "Riverside Agency · Edhasa Argentina", role: "Comunicadora Integral / Prensa y Redes Sociales · Abril 2024 – Presente",
-          description: "Gestión integral de comunicación para una agencia creativa y su sello editorial: redes sociales, prensa, pauta publicitaria, email marketing y cobertura de eventos.",
+          number: "01", category: "Distribuidora de libros · Comunicación integral", title: "Riverside Agency · Edhasa Argentina", role: "Comunicadora Integral / Prensa y Redes Sociales · Abril 2024 – Presente",
+          description: "Gestión integral de comunicación para una distribuidora de libros y sus sellos editoriales: redes sociales, prensa, pauta publicitaria, email marketing y cobertura de eventos.",
           tasks: [
             "Crecimiento orgánico: +146% @riverside (7K→17.2K), +170% @hablemosdelbros (4K→10.8K), +167% @edhasa (3K→8K)",
             "Coordinación de 2 campañas nacionales 'Suelta de Libros' con 50+ librerías, influencers y medios",
@@ -85,25 +85,42 @@ export const t = {
             "Campañas Día del Niño y Semana Negra: activaciones presenciales + digital + email marketing + influencers",
             "Producción de 10+ presentaciones de libros; nexo entre 25+ editoriales, área comercial y editorial",
           ],
-          challenge: "Comunicar para una agencia creativa es un ejercicio meta: se vende comunicación con comunicación. El estándar de calidad es máximo.",
+          challenge: "Lograr unir el sistema visual y de contenido de editoriales tan distintas bajo un mismo sentido armónico y profesional.",
           lesson: "La importancia de unificar la voz de marca entre canales internos y externos. La coherencia es lo que construye confianza.",
-          quote: "Cuando tu cliente es una agencia creativa, no alcanza con ser buena — hay que ser impecable.",
-          links: [{ label: "@riversideagency", url: "https://www.instagram.com/riversideagency" }, { label: "@edhasaargentina", url: "https://www.instagram.com/edhasaargentina" }],
+          quote: "El verdadero desafío no es unificar un mensaje institucional, sino dominar el arte de hablar veinte idiomas literarios distintos al mismo tiempo.",
+          links: [
+            { label: "@riversideagency", url: "https://www.instagram.com/riversideagency" },
+            { label: "@edhasaargentina", url: "https://www.instagram.com/edhasaargentina" },
+            { label: "@hablemosdelbros", url: "https://www.instagram.com/hablemosdelbros" }
+          ],
+          images: ["/projects/01-riverside-1.jpg", "/projects/01-riverside-2.jpg", "/projects/01-riverside-3.jpg"],
+          reels: [
+            "https://www.instagram.com/reel/DPEg-OzjWTB",
+            "https://www.instagram.com/reel/DHUAFtgRUv1",
+            "https://www.instagram.com/reel/DFqAWtwRd_X",
+            "https://www.instagram.com/reel/C8P46VZv71b"
+          ],
         },
         {
-          number: "02", category: "Producción cultural · Audiovisual", title: "Huinca Cine + Festival Wateke", role: "Producción y Comunicación · Enero – Diciembre 2022",
-          description: "Comunicación y producción digital para una productora de cine independiente y su festival audiovisual. Cobertura en festivales, gestión de prensa y contenido para múltiples proyectos simultáneos.",
+          number: "02", category: "Producción publicitaria · Audiovisual", title: "Huinca Cine", role: "Producción y Comunicación · Enero – Diciembre 2022",
+          description: "Comunicación y producción digital para una destacada productora de publicidad. Cobertura en rodajes, gestión de prensa y contenido para múltiples campañas comerciales simultáneas.",
           tasks: [
-            "Enlace con periodistas, directores y medios especializados en cine",
-            "Cobertura en festivales de cine con representación institucional de la productora",
+            "Enlace con periodistas, directores y medios publicitarios",
+            "Cobertura en rodajes y comerciales con representación institucional de la productora",
             "Producción autónoma de contenido digital por proyecto (reels, posteos, gráficas)",
             "Cobertura en sets y pitches para Dove, Unilever y Sedal",
             "Traducciones profesionales inglés-español para materiales de difusión",
           ],
-          challenge: "El cine independiente no cuenta con presupuestos de marketing convencionales. Cada recurso destinado a comunicación debe maximizar su impacto.",
+          challenge: "En la publicidad el ritmo es vertiginoso y la estética lo es todo. El reto es generar contenido que refleje la excelencia técnica de un set en tiempo real.",
           lesson: "Adaptar la voz a cada proyecto sin perder la identidad de la productora. La versatilidad es clave.",
-          quote: "El cine independiente enseña a hacer mucho con poco — y eso es comunicación en estado puro.",
-          links: [{ label: "@huincacine", url: "https://www.instagram.com/huincacine" }, { label: "@festivalwateke", url: "https://www.instagram.com/festivalwateke" }],
+          quote: "La publicidad no espera. Comunicar una productora exige la misma velocidad y precisión quirúrgica que ocurre detrás de las cámaras.",
+          links: [{ label: "@huincacine", url: "https://www.instagram.com/huincacine" }],
+          images: [
+            "/projects/HUINCA/20220201_143755.jpg",
+            "/projects/HUINCA/20220309_174358.jpg",
+            "/projects/HUINCA/HUINCA CINE 2022.jpg",
+            "/projects/HUINCA/20220201_153216.mp4"
+          ]
         },
         {
           number: "03", category: "Aviación privada · Social Media", title: "WeloJets", role: "Social Media Content Specialist · Enero 2023 – Abril 2024",
@@ -119,6 +136,19 @@ export const t = {
           lesson: "El contenido premium funciona cuando deja de intentar parecer lujoso. Los mejores resultados surgen de mostrar la experiencia real.",
           quote: "El contenido premium no se trata de filtros dorados — se trata de contar una historia que genere conexión.",
           links: [{ label: "@welojets", url: "https://www.instagram.com/welojets" }],
+          images: [
+            "/projects/WELO/1 (1).jpg",
+            "/projects/WELO/averiguar avion.jpg",
+            "/projects/WELO/EMPTY LEGS.mp4"
+          ],
+          reels: [
+            "https://www.instagram.com/reel/C3QhQMbO4Br",
+            "https://www.instagram.com/reel/C1Pd2RJukmD",
+            "https://www.instagram.com/reel/C04XUxmOEiP",
+            "https://www.instagram.com/reel/Cz_infQhFJF",
+            "https://www.instagram.com/reel/Cvz9EgKPZXk",
+            "https://www.instagram.com/reel/C4qVffDsnts"
+          ],
         },
         {
           number: "04", category: "Community Management · Freelance", title: "Neterwalk · Yamaneat · Grupo Octubre · Festival Wateke", role: "Community Manager Freelance · Marzo 2023 – Presente",
@@ -148,24 +178,11 @@ export const t = {
           lesson: "La producción es comunicación en su forma más directa: se coordinan personas, tiempos, recursos y expectativas.",
           quote: "El set enseña algo que ningún libro puede: a resolver bajo presión, en silencio, y bien.",
         },
-        {
-          number: "06", category: "Evento internacional · Press Operations", title: "JJ.OO. de la Juventud 2018", role: "Press Operations Office · Buenos Aires 2018",
-          description: "Operaciones de prensa del Comité Organizador de los Juegos Olímpicos de la Juventud. Coordinación con medios internacionales en un entorno multicultural y de alta exigencia.",
-          tasks: [
-            "Operaciones de prensa del Comité Organizador",
-            "Coordinación con medios internacionales acreditados",
-            "Logística de acreditaciones y soporte a periodistas",
-            "Trabajo en entorno multicultural y protocolos internacionales",
-          ],
-          challenge: "Todo ocurre en vivo, todo es urgente y todo tiene alcance global. Los estándares son, literalmente, olímpicos.",
-          lesson: "La certeza de poder desempeñarme en entornos internacionales, con equipos multiculturales, bajo presión y con profesionalismo.",
-          quote: "Los Juegos Olímpicos no enseñan comunicación — enseñan qué tipo de comunicadora se quiere ser.",
-        },
       ],
       en: [
         {
-          number: "01", category: "Creative agency · Integrated comms", title: "Riverside Agency · Edhasa Argentina", role: "PR, Content & Social Media Manager · April 2024 – Present",
-          description: "Full-scope communications management for a creative agency and its publishing imprint: social media, press, advertising, email marketing and event coverage.",
+          number: "01", category: "Book distributor · Integrated comms", title: "Riverside Agency · Edhasa Argentina", role: "PR, Content & Social Media Manager · April 2024 – Present",
+          description: "Full-scope communications management for a leading book distributor and its publishing imprints: social media, press, advertising, email marketing and event coverage.",
           tasks: [
             "Organic growth: +146% @riverside (7K→17.2K), +170% @hablemosdelbros (4K→10.8K), +167% @edhasa (3K→8K)",
             "Coordinated 2 national 'Suelta de Libros' campaigns with 50+ bookstores, influencers and media outlets",
@@ -173,25 +190,42 @@ export const t = {
             "Children's Day and Semana Negra campaigns: in-person activations + digital + email marketing + influencer outreach",
             "Produced 10+ book launch events; liaison across 25+ publishers, commercial and editorial teams",
           ],
-          challenge: "Communicating for a creative agency is inherently meta — you are selling communication through communication. The quality bar is at its highest.",
+          challenge: "Uniting the visual and content systems of very different publishing houses under a single, harmonious brand sense.",
           lesson: "The importance of unifying brand voice across internal and external channels. Consistency is what builds trust.",
-          quote: "When your client is a creative agency, being good isn't enough — you need to be impeccable.",
-          links: [{ label: "@riversideagency", url: "https://www.instagram.com/riversideagency" }, { label: "@edhasaargentina", url: "https://www.instagram.com/edhasaargentina" }],
+          quote: "The true challenge isn't unifying a corporate message, but mastering the art of speaking twenty different literary languages at the same time.",
+          links: [
+            { label: "@riversideagency", url: "https://www.instagram.com/riversideagency" },
+            { label: "@edhasaargentina", url: "https://www.instagram.com/edhasaargentina" },
+            { label: "@hablemosdelbros", url: "https://www.instagram.com/hablemosdelbros" }
+          ],
+          images: ["/projects/01-riverside-1.jpg", "/projects/01-riverside-2.jpg", "/projects/01-riverside-3.jpg"],
+          reels: [
+            "https://www.instagram.com/reel/DPEg-OzjWTB",
+            "https://www.instagram.com/reel/DHUAFtgRUv1",
+            "https://www.instagram.com/reel/DFqAWtwRd_X",
+            "https://www.instagram.com/reel/C8P46VZv71b"
+          ],
         },
         {
-          number: "02", category: "Cultural production · Audiovisual", title: "Huinca Cine + Festival Wateke", role: "Production & Communications · January – December 2022",
-          description: "Communications and digital production for an independent film production company and its audiovisual festival. Festival coverage, press relations and content across multiple simultaneous projects.",
+          number: "02", category: "Advertising production · Audiovisual", title: "Huinca Cine", role: "Production & Communications · January – December 2022",
+          description: "Communications and digital production for a leading advertising production company. On-set coverage, press relations and content across multiple simultaneous commercial campaigns.",
           tasks: [
-            "Communications liaison with journalists, directors and specialized film media",
-            "Represented the production company at film festivals with real-time social media coverage",
+            "Communications liaison with journalists, directors and advertising media",
+            "On-set commercial coverage representing the production company",
             "Autonomous production of all digital content per project (reels, posts, graphics)",
             "On-set coverage and pitch support for Dove, Unilever and Sedal",
             "Professional English-Spanish translations for press materials",
           ],
-          challenge: "Independent cinema does not have conventional marketing budgets. Every resource allocated to communications must maximize its impact.",
+          challenge: "In advertising, the pace is relentless and aesthetics are everything. The challenge is generating content that reflects technical on-set excellence in real time.",
           lesson: "Adapting voice to each project without losing the production company's identity. Versatility is essential.",
-          quote: "Independent cinema teaches you to accomplish a great deal with very little — and that is communication in its purest form.",
-          links: [{ label: "@huincacine", url: "https://www.instagram.com/huincacine" }, { label: "@festivalwateke", url: "https://www.instagram.com/festivalwateke" }],
+          quote: "Advertising doesn't wait. Communicating for a production company demands the same speed and surgical precision that happens behind the cameras.",
+          links: [{ label: "@huincacine", url: "https://www.instagram.com/huincacine" }],
+          images: [
+            "/projects/HUINCA/20220201_143755.jpg",
+            "/projects/HUINCA/20220309_174358.jpg",
+            "/projects/HUINCA/HUINCA CINE 2022.jpg",
+            "/projects/HUINCA/20220201_153216.mp4"
+          ]
         },
         {
           number: "03", category: "Private aviation · Social Media", title: "WeloJets", role: "Social Media Content Specialist · January 2023 – April 2024",
@@ -207,6 +241,19 @@ export const t = {
           lesson: "Premium content works when it stops trying to appear luxurious. The strongest results come from showcasing the real experience.",
           quote: "Premium content is not about gold filters — it is about telling a story that creates genuine connection.",
           links: [{ label: "@welojets", url: "https://www.instagram.com/welojets" }],
+          images: [
+            "/projects/WELO/1 (1).jpg",
+            "/projects/WELO/averiguar avion.jpg",
+            "/projects/WELO/EMPTY LEGS.mp4"
+          ],
+          reels: [
+            "https://www.instagram.com/reel/C3QhQMbO4Br",
+            "https://www.instagram.com/reel/C1Pd2RJukmD",
+            "https://www.instagram.com/reel/C04XUxmOEiP",
+            "https://www.instagram.com/reel/Cz_infQhFJF",
+            "https://www.instagram.com/reel/Cvz9EgKPZXk",
+            "https://www.instagram.com/reel/C4qVffDsnts"
+          ],
         },
         {
           number: "04", category: "Community Management · Freelance", title: "Neterwalk · Yamaneat · Grupo Octubre · Festival Wateke", role: "Freelance Community Manager · March 2023 – Present",
@@ -235,19 +282,6 @@ export const t = {
           challenge: "On a film set, there is no 'I'll fix it later.' Every minute counts, and every mistake has a direct cost.",
           lesson: "Production is communication in its most direct form: coordinating people, timelines, resources and expectations.",
           quote: "The set teaches something no textbook can: how to solve problems under pressure, quietly, and well.",
-        },
-        {
-          number: "06", category: "International event · Press Operations", title: "Youth Olympic Games 2018", role: "Press Operations Office · Buenos Aires 2018",
-          description: "Press operations for the Organizing Committee of the Youth Olympic Games. Coordination with international media in a multicultural, high-demand environment.",
-          tasks: [
-            "Organizing Committee press operations",
-            "Coordination with accredited international media",
-            "Accreditation logistics and journalist support",
-            "Multicultural work environment with international protocols",
-          ],
-          challenge: "Everything happens live, everything is urgent, and everything has global reach. Standards are, quite literally, Olympic.",
-          lesson: "The certainty of being able to perform in international environments, with multicultural teams, under pressure and with professionalism.",
-          quote: "The Olympic Games do not teach communication — they teach you what kind of communicator you aspire to be.",
         },
       ],
     },
@@ -330,8 +364,7 @@ export const t = {
         { year: "2021", title: "Intercambio · Grado en Comunicación Audiovisual", org: "Universidad Carlos III de Madrid (UC3M)" },
         { year: "2018 – 2021", title: "Lic. en Ciencias de la Comunicación", org: "Universidad Argentina de la Empresa (UADE)" },
         { year: "2021", title: "Cambridge Certificate of Proficiency (C2)", org: "CEFR" },
-        { year: "2018", title: "Cambridge Certificate in Advanced English (C1)", org: "CEFR" },
-        { year: "2018", title: "JJ.OO. de la Juventud — Press Operations", org: "Buenos Aires 2018" },
+        { year: "2018", title: "Cambridge Certificate in Advanced English (C1)", org: "CEFR" }
       ],
       en: [
         { year: "2024 – Present", title: "PR, Content & Social Media Manager", org: "Riverside Agency · Edhasa Argentina" },
@@ -342,8 +375,7 @@ export const t = {
         { year: "2021", title: "Exchange · Degree in Audiovisual Communication", org: "Universidad Carlos III de Madrid (UC3M)" },
         { year: "2018 – 2021", title: "Bachelor's in Communication Sciences", org: "Universidad Argentina de la Empresa (UADE)" },
         { year: "2021", title: "Cambridge Certificate of Proficiency (C2)", org: "CEFR" },
-        { year: "2018", title: "Cambridge Certificate in Advanced English (C1)", org: "CEFR" },
-        { year: "2018", title: "Youth Olympic Games — Press Operations", org: "Buenos Aires 2018" },
+        { year: "2018", title: "Cambridge Certificate in Advanced English (C1)", org: "CEFR" }
       ],
     },
     volunteer: {
@@ -359,11 +391,11 @@ export const t = {
   },
   contact: {
     label: { es: "Contacto", en: "Contact" },
-    heading1: { es: "¿Tiene un proyecto?", en: "Have a project?" },
-    heading2: { es: "Conversemos.", en: "Let's talk." },
+    heading1: { es: "¡Gracias!", en: "Thank you!" },
+    heading2: { es: "", en: "" },
     desc: {
-      es: "Si busca a alguien que planifique la estrategia y también la ejecute, estoy a disposición.",
-      en: "If you are looking for someone who plans the strategy and also executes it, I would be glad to connect.",
+      es: "",
+      en: "",
     },
   },
 } as const;

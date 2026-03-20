@@ -6,26 +6,26 @@
 
 @layer base {
   :root {
-    --background: 220 15% 8%;
-    --foreground: 40 20% 92%;
+    --background: 225 15% 5%;
+    --foreground: 40 20% 95%;
 
-    --card: 220 14% 12%;
-    --card-foreground: 40 20% 92%;
+    --card: 225 14% 9%;
+    --card-foreground: 40 20% 95%;
 
-    --popover: 220 14% 12%;
-    --popover-foreground: 40 20% 92%;
+    --popover: 225 14% 9%;
+    --popover-foreground: 40 20% 95%;
 
-    --primary: 12 76% 61%;
-    --primary-foreground: 220 15% 8%;
+    --primary: 20 85% 55%;
+    --primary-foreground: 225 15% 5%;
 
-    --secondary: 220 12% 16%;
-    --secondary-foreground: 40 20% 92%;
+    --secondary: 225 12% 13%;
+    --secondary-foreground: 40 20% 95%;
 
-    --muted: 220 10% 18%;
-    --muted-foreground: 220 10% 55%;
+    --muted: 225 10% 15%;
+    --muted-foreground: 225 10% 60%;
 
-    --accent: 12 76% 61%;
-    --accent-foreground: 220 15% 8%;
+    --accent: 20 85% 55%;
+    --accent-foreground: 225 15% 5%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 40 20% 92%;
@@ -37,11 +37,11 @@
     --radius: 0.5rem;
 
     /* Custom tokens */
-    --coral: 12 76% 61%;
-    --cream: 40 20% 92%;
-    --charcoal: 220 15% 8%;
-    --charcoal-light: 220 14% 12%;
-    --charcoal-mid: 220 12% 16%;
+    --coral: 20 85% 55%;
+    --cream: 40 20% 95%;
+    --charcoal: 225 15% 5%;
+    --charcoal-light: 225 14% 9%;
+    --charcoal-mid: 225 12% 13%;
   }
 }
 

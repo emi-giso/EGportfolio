@@ -8,12 +8,14 @@ import { Projects } from "@/components/Projects";
 import { Skills } from "@/components/Skills";
 import { Education } from "@/components/Education";
 import { Contact } from "@/components/Contact";
+import { GlobalSpotlight } from "@/components/GlobalSpotlight";
 import { LanguageProvider } from "@/i18n/LanguageContext";
 
 const Index = () => {
   return (
     <LanguageProvider>
-      <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <div className="min-h-screen bg-background text-foreground overflow-x-hidden relative">
+        <GlobalSpotlight />
         <Navbar />
         <Hero />
         <BrandMarquee />
