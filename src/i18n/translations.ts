@@ -102,28 +102,7 @@ export const t = {
           ],
         },
         {
-          number: "02", category: "Producción publicitaria · Audiovisual", title: "Huinca Cine", role: "Producción y Comunicación · Enero – Diciembre 2022",
-          description: "Comunicación y producción digital para una destacada productora de publicidad. Cobertura en rodajes, gestión de prensa y contenido para múltiples campañas comerciales simultáneas.",
-          tasks: [
-            "Enlace con periodistas, directores y medios publicitarios",
-            "Cobertura en rodajes y comerciales con representación institucional de la productora",
-            "Producción autónoma de contenido digital por proyecto (reels, posteos, gráficas)",
-            "Cobertura en sets y pitches para Dove, Unilever y Sedal",
-            "Traducciones profesionales inglés-español para materiales de difusión",
-          ],
-          challenge: "En la publicidad el ritmo es vertiginoso y la estética lo es todo. El reto es generar contenido que refleje la excelencia técnica de un set en tiempo real.",
-          lesson: "Adaptar la voz a cada proyecto sin perder la identidad de la productora. La versatilidad es clave.",
-          quote: "La publicidad no espera. Comunicar una productora exige la misma velocidad y precisión quirúrgica que ocurre detrás de las cámaras.",
-          links: [{ label: "@huincacine", url: "https://www.instagram.com/huincacine" }],
-          images: [
-            "/projects/HUINCA/20220201_143755.jpg",
-            "/projects/HUINCA/20220309_174358.jpg",
-            "/projects/HUINCA/HUINCA CINE 2022.jpg",
-            "/projects/HUINCA/20220201_153216.mp4"
-          ]
-        },
-        {
-          number: "03", category: "Aviación privada · Social Media", title: "WeloJets", role: "Social Media Content Specialist · Enero 2023 – Abril 2024",
+          number: "02", category: "Aviación privada · Social Media", title: "WeloJets", role: "Social Media Content Specialist · Enero 2023 – Abril 2024",
           description: "Estrategia de contenido end-to-end para una empresa de aviación privada: Instagram, LinkedIn, Facebook, blog corporativo, pauta publicitaria y reportes de métricas.",
           tasks: [
             "Instagram: +15% seguidores (7.8K→9K), engagement rate 2.9%, 596 likes/mes promedio, 221K+ impresiones",
@@ -149,6 +128,27 @@ export const t = {
             "https://www.instagram.com/reel/Cvz9EgKPZXk",
             "https://www.instagram.com/reel/C4qVffDsnts"
           ],
+        },
+        {
+          number: "03", category: "Producción publicitaria · Audiovisual", title: "Huinca Cine", role: "Producción y Comunicación · Enero – Diciembre 2022",
+          description: "Comunicación y producción digital para una destacada productora de publicidad. Cobertura en rodajes, gestión de prensa y contenido para múltiples campañas comerciales simultáneas.",
+          tasks: [
+            "Enlace con periodistas, directores y medios publicitarios",
+            "Cobertura en rodajes y comerciales con representación institucional de la productora",
+            "Producción autónoma de contenido digital por proyecto (reels, posteos, gráficas)",
+            "Cobertura en sets y pitches para Dove, Unilever y Sedal",
+            "Traducciones profesionales inglés-español para materiales de difusión",
+          ],
+          challenge: "En la publicidad el ritmo es vertiginoso y la estética lo es todo. El reto es generar contenido que refleje la excelencia técnica de un set en tiempo real.",
+          lesson: "Adaptar la voz a cada proyecto sin perder la identidad de la productora. La versatilidad es clave.",
+          quote: "La publicidad no espera. Comunicar una productora exige la misma velocidad y precisión quirúrgica que ocurre detrás de las cámaras.",
+          links: [{ label: "@huincacine", url: "https://www.instagram.com/huincacine" }],
+          images: [
+            "/projects/HUINCA/20220201_143755.jpg",
+            "/projects/HUINCA/20220309_174358.jpg",
+            "/projects/HUINCA/HUINCA CINE 2022.jpg",
+            "/projects/HUINCA/20220201_153216.mp4"
+          ]
         },
         {
           number: "04", category: "Community Management · Freelance", title: "Neterwalk · Yamaneat · Grupo Octubre · Festival Wateke", role: "Community Manager Freelance · Marzo 2023 – Presente",
@@ -207,28 +207,7 @@ export const t = {
           ],
         },
         {
-          number: "02", category: "Advertising production · Audiovisual", title: "Huinca Cine", role: "Production & Communications · January – December 2022",
-          description: "Communications and digital production for a leading advertising production company. On-set coverage, press relations and content across multiple simultaneous commercial campaigns.",
-          tasks: [
-            "Communications liaison with journalists, directors and advertising media",
-            "On-set commercial coverage representing the production company",
-            "Autonomous production of all digital content per project (reels, posts, graphics)",
-            "On-set coverage and pitch support for Dove, Unilever and Sedal",
-            "Professional English-Spanish translations for press materials",
-          ],
-          challenge: "In advertising, the pace is relentless and aesthetics are everything. The challenge is generating content that reflects technical on-set excellence in real time.",
-          lesson: "Adapting voice to each project without losing the production company's identity. Versatility is essential.",
-          quote: "Advertising doesn't wait. Communicating for a production company demands the same speed and surgical precision that happens behind the cameras.",
-          links: [{ label: "@huincacine", url: "https://www.instagram.com/huincacine" }],
-          images: [
-            "/projects/HUINCA/20220201_143755.jpg",
-            "/projects/HUINCA/20220309_174358.jpg",
-            "/projects/HUINCA/HUINCA CINE 2022.jpg",
-            "/projects/HUINCA/20220201_153216.mp4"
-          ]
-        },
-        {
-          number: "03", category: "Private aviation · Social Media", title: "WeloJets", role: "Social Media Content Specialist · January 2023 – April 2024",
+          number: "02", category: "Private aviation · Social Media", title: "WeloJets", role: "Social Media Content Specialist · January 2023 – April 2024",
           description: "End-to-end content strategy for a private aviation company: Instagram, LinkedIn, Facebook, corporate blog, paid advertising and metrics reporting.",
           tasks: [
             "Instagram: +15% followers (7.8K→9K), engagement rate 2.9%, 596 avg. likes/month, 221K+ impressions",
@@ -254,6 +233,27 @@ export const t = {
             "https://www.instagram.com/reel/Cvz9EgKPZXk",
             "https://www.instagram.com/reel/C4qVffDsnts"
           ],
+        },
+        {
+          number: "03", category: "Advertising production · Audiovisual", title: "Huinca Cine", role: "Production & Communications · January – December 2022",
+          description: "Communications and digital production for a leading advertising production company. On-set coverage, press relations and content across multiple simultaneous commercial campaigns.",
+          tasks: [
+            "Communications liaison with journalists, directors and advertising media",
+            "On-set commercial coverage representing the production company",
+            "Autonomous production of all digital content per project (reels, posts, graphics)",
+            "On-set coverage and pitch support for Dove, Unilever and Sedal",
+            "Professional English-Spanish translations for press materials",
+          ],
+          challenge: "In advertising, the pace is relentless and aesthetics are everything. The challenge is generating content that reflects technical on-set excellence in real time.",
+          lesson: "Adapting voice to each project without losing the production company's identity. Versatility is essential.",
+          quote: "Advertising doesn't wait. Communicating for a production company demands the same speed and surgical precision that happens behind the cameras.",
+          links: [{ label: "@huincacine", url: "https://www.instagram.com/huincacine" }],
+          images: [
+            "/projects/HUINCA/20220201_143755.jpg",
+            "/projects/HUINCA/20220309_174358.jpg",
+            "/projects/HUINCA/HUINCA CINE 2022.jpg",
+            "/projects/HUINCA/20220201_153216.mp4"
+          ]
         },
         {
           number: "04", category: "Community Management · Freelance", title: "Neterwalk · Yamaneat · Grupo Octubre · Festival Wateke", role: "Freelance Community Manager · March 2023 – Present",
