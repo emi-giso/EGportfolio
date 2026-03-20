@@ -1,17 +1,20 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
-const navItems = [
-  { label: "Sobre mí", href: "#about" },
-  { label: "Proyectos", href: "#projects" },
-  { label: "Skills", href: "#skills" },
-  { label: "Formación", href: "#education" },
-  { label: "Contacto", href: "#contact" },
-];
+import { useLanguage } from "@/i18n/LanguageContext";
+import { t } from "@/i18n/translations";
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { lang, toggle } = useLanguage();
+
+  const navItems = [
+    { label: t.nav.about[lang], href: "#about" },
+    { label: t.nav.projects[lang], href: "#projects" },
+    { label: t.nav.skills[lang], href: "#skills" },
+    { label: t.nav.education[lang], href: "#education" },
+    { label: t.nav.contact[lang], href: "#contact" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -47,18 +50,32 @@ export const Navbar = () => {
                 {item.label}
               </a>
             ))}
+            <button
+              onClick={toggle}
+              className="ml-2 px-3 py-1.5 text-xs font-bold uppercase tracking-widest border border-border rounded-full text-muted-foreground hover:text-coral hover:border-coral/50 transition-all duration-300 active:scale-[0.95]"
+            >
+              {lang === "es" ? "EN" : "ES"}
+            </button>
           </div>
 
           {/* Mobile toggle */}
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden flex flex-col gap-1.5 p-2"
-            aria-label="Toggle menu"
-          >
-            <span className={`w-6 h-0.5 bg-foreground transition-transform duration-300 ${mobileOpen ? "rotate-45 translate-y-2" : ""}`} />
-            <span className={`w-6 h-0.5 bg-foreground transition-opacity duration-300 ${mobileOpen ? "opacity-0" : ""}`} />
-            <span className={`w-6 h-0.5 bg-foreground transition-transform duration-300 ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`} />
-          </button>
+          <div className="md:hidden flex items-center gap-3">
+            <button
+              onClick={toggle}
+              className="px-2.5 py-1 text-xs font-bold uppercase tracking-widest border border-border rounded-full text-muted-foreground hover:text-coral transition-colors active:scale-[0.95]"
+            >
+              {lang === "es" ? "EN" : "ES"}
+            </button>
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="flex flex-col gap-1.5 p-2"
+              aria-label="Toggle menu"
+            >
+              <span className={`w-6 h-0.5 bg-foreground transition-transform duration-300 ${mobileOpen ? "rotate-45 translate-y-2" : ""}`} />
+              <span className={`w-6 h-0.5 bg-foreground transition-opacity duration-300 ${mobileOpen ? "opacity-0" : ""}`} />
+              <span className={`w-6 h-0.5 bg-foreground transition-transform duration-300 ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+            </button>
+          </div>
         </div>
       </motion.nav>
 

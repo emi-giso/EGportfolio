@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "@/i18n/LanguageContext";
+import { t } from "@/i18n/translations";
 
 export const Hero = () => {
+  const { lang } = useLanguage();
+
   return (
     <section className="min-h-screen flex flex-col justify-center relative overflow-hidden section-padding">
-      {/* Background decorative elements */}
       <div className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full bg-coral/5 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-coral/3 blur-[80px] pointer-events-none" />
 
@@ -14,7 +17,7 @@ export const Hero = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-coral font-body text-base md:text-lg mb-6 tracking-wide"
         >
-          Hola, soy
+          {t.hero.greeting[lang]}
         </motion.p>
 
         <motion.h1
@@ -34,8 +37,8 @@ export const Hero = () => {
           transition={{ duration: 0.7, delay: 0.7 }}
           className="text-muted-foreground text-lg md:text-xl max-w-xl leading-relaxed mb-12"
         >
-          Comunicadora integral que planifica, produce y ejecuta contenido para marcas reales.{" "}
-          <span className="text-foreground font-medium">No hago posteos — construyo presencias digitales.</span>
+          {t.hero.desc[lang]}{" "}
+          <span className="text-foreground font-medium">{t.hero.descBold[lang]}</span>
         </motion.p>
 
         <motion.div
@@ -48,19 +51,18 @@ export const Hero = () => {
             href="#projects"
             className="group inline-flex items-center gap-2 bg-coral text-primary-foreground px-8 py-4 rounded-lg font-display font-semibold text-sm uppercase tracking-wider hover:bg-coral/90 transition-all duration-300 active:scale-[0.97]"
           >
-            Ver proyectos
+            {t.hero.cta1[lang]}
             <span className="group-hover:translate-y-1 transition-transform duration-300">↓</span>
           </a>
           <a
             href="#contact"
             className="inline-flex items-center gap-2 border border-border text-foreground px-8 py-4 rounded-lg font-display font-semibold text-sm uppercase tracking-wider hover:border-coral/50 hover:text-coral transition-all duration-300 active:scale-[0.97]"
           >
-            Hablemos
+            {t.hero.cta2[lang]}
           </a>
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
