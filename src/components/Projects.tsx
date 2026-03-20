@@ -4,7 +4,7 @@ import { ScrollReveal } from "./ScrollReveal";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { t } from "@/i18n/translations";
 
-const ProjectCard = ({ project, index }: { project: typeof t.projects.items.es[number]; index: number }) => {
+const ProjectCard = ({ project, index }: { project: typeof t.projects.items.es[number] & { links?: readonly { readonly label: string; readonly url: string }[] }; index: number }) => {
   const [expanded, setExpanded] = useState(false);
   const { lang } = useLanguage();
 
