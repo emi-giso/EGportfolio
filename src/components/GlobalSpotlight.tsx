@@ -4,16 +4,16 @@ export const GlobalSpotlight = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isVisible, setIsVisible] = useState(false);
   const [radius, setRadius] = useState(600);
-  const [spotlightOpacity, setSpotlightOpacity] = useState(0.08);
+  const [spotlightOpacity, setSpotlightOpacity] = useState(0.15);
 
   useEffect(() => {
     const updateSize = () => {
       if (window.innerWidth < 768) {
         setRadius(350);
-        setSpotlightOpacity(0.12);
+        setSpotlightOpacity(0.20);
       } else {
         setRadius(600);
-        setSpotlightOpacity(0.08);
+        setSpotlightOpacity(0.15);
       }
     };
     
