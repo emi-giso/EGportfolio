@@ -10,10 +10,10 @@ export const Hero = () => {
       <div className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full bg-coral/5 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-coral/3 blur-[80px] pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto w-full pt-24">
+      <div className="max-w-7xl mx-auto w-full pt-24">
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-coral font-body text-base md:text-lg mb-6 tracking-wide"
         >
@@ -21,10 +21,10 @@ export const Hero = () => {
         </motion.p>
 
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-[0.9] tracking-tight mb-8"
+          initial={{ opacity: 0, y: 40, filter: "blur(6px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+          className="font-display text-6xl sm:text-8xl md:text-[9rem] lg:text-[11rem] font-bold leading-[0.85] tracking-tighter mb-8"
         >
           Emilia
           <br />
@@ -34,7 +34,7 @@ export const Hero = () => {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.7 }}
+          transition={{ duration: 0.7, delay: 0.8 }}
           className="text-muted-foreground text-lg md:text-xl max-w-xl leading-relaxed mb-12"
         >
           {t.hero.desc[lang]}{" "}
@@ -44,7 +44,7 @@ export const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1 }}
+          transition={{ duration: 0.6, delay: 1.1 }}
           className="flex flex-wrap gap-4"
         >
           <a
@@ -63,10 +63,11 @@ export const Hero = () => {
         </motion.div>
       </div>
 
+      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
+        transition={{ delay: 1.8, duration: 1 }}
         className="absolute bottom-12 left-1/2 -translate-x-1/2"
       >
         <motion.div
