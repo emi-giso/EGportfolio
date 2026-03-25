@@ -87,7 +87,6 @@ export const t = {
           ],
           challenge: "Lograr unir el sistema visual y de contenido de editoriales tan distintas bajo un mismo sentido armónico y profesional.",
           lesson: "La importancia de unificar la voz de marca entre canales internos y externos. La coherencia es lo que construye confianza.",
-          quote: "El verdadero desafío no es unificar un mensaje institucional, sino dominar el arte de hablar veinte idiomas literarios distintos al mismo tiempo.",
           heroMetric: "+146% Growth",
           metricsComparison: {
             before: { value: "7,000", label: "Seguidores", detail: "1.2% Engagement" },
@@ -233,7 +232,6 @@ export const t = {
           ],
           challenge: "Uniting the visual and content systems of very different publishing houses under a single, harmonious brand sense.",
           lesson: "The importance of unifying brand voice across internal and external channels. Consistency is what builds trust.",
-          quote: "The true challenge isn't unifying a corporate message, but mastering the art of speaking twenty different literary languages at the same time.",
           heroMetric: "+146% Growth",
           metricsComparison: {
             before: { value: "7,000", label: "Followers", detail: "1.2% Engagement" },

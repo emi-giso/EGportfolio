@@ -318,27 +318,29 @@ const ProjectCard = ({ project }: { project: any }) => {
           </div>
 
           {/* Testimonial o Quote Impactante */}
-          {project.testimonial ? (
-            <div className="max-w-4xl mx-auto text-center space-y-10 animate-fade-up" style={{ animationDelay: "250ms" }}>
-              <div className="inline-block p-4 rounded-full bg-coral/10 text-coral">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="currentColor">
-                  <path d="M10 25h5l3-8h-6l2-8h-7l-2 8v8h5zm15 0h5l3-8h-6l2-8h-7l-2 8v8h5z" />
-                </svg>
+          {(project.testimonial || project.quote) && (
+            project.testimonial ? (
+              <div className="max-w-4xl mx-auto text-center space-y-10 animate-fade-up" style={{ animationDelay: "250ms" }}>
+                <div className="inline-block p-4 rounded-full bg-coral/10 text-coral">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="currentColor">
+                    <path d="M10 25h5l3-8h-6l2-8h-7l-2 8v8h5zm15 0h5l3-8h-6l2-8h-7l-2 8v8h5z" />
+                  </svg>
+                </div>
+                <blockquote className="font-display text-2xl md:text-5xl font-bold leading-tight md:leading-[1.2] text-foreground">
+                  "{project.testimonial.quote}"
+                </blockquote>
+                <div className="space-y-2">
+                  <div className="h-1 w-20 bg-coral mx-auto" />
+                  <p className="text-coral font-bold uppercase tracking-widest text-sm">{project.testimonial.author}</p>
+                </div>
               </div>
-              <blockquote className="font-display text-2xl md:text-5xl font-bold leading-tight md:leading-[1.2] text-foreground">
-                "{project.testimonial.quote}"
+            ) : (
+              <blockquote className="my-16 max-w-4xl mx-auto bg-gradient-to-br from-coral to-[#ff8f8f] text-white p-8 md:p-12 rounded-[3rem] shadow-[0_30px_60px_rgba(255,107,107,0.3)] transform hover:scale-[1.01] transition-transform duration-500 animate-fade-up text-center" style={{ animationDelay: "250ms" }}>
+                <p className="font-display text-2xl md:text-4xl font-bold leading-tight md:leading-[1.3]">
+                  "{project.quote}"
+                </p>
               </blockquote>
-              <div className="space-y-2">
-                <div className="h-1 w-20 bg-coral mx-auto" />
-                <p className="text-coral font-bold uppercase tracking-widest text-sm">{project.testimonial.author}</p>
-              </div>
-            </div>
-          ) : (
-            <blockquote className="my-16 max-w-4xl mx-auto bg-gradient-to-br from-coral to-[#ff8f8f] text-white p-8 md:p-12 rounded-[3rem] shadow-[0_30px_60px_rgba(255,107,107,0.3)] transform hover:scale-[1.01] transition-transform duration-500 animate-fade-up text-center" style={{ animationDelay: "250ms" }}>
-              <p className="font-display text-2xl md:text-4xl font-bold leading-tight md:leading-[1.3]">
-                "{project.quote}"
-              </p>
-            </blockquote>
+            )
           )}
 
           {/* Enlaces Orgánicos */}
