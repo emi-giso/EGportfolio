@@ -9,8 +9,8 @@ export const Navbar = () => {
   const { lang, toggle } = useLanguage();
 
   const navItems = [
-    { label: t.nav.about[lang], href: "#about" },
     { label: t.nav.projects[lang], href: "#projects" },
+    { label: t.nav.about[lang], href: "#about" },
     { label: t.nav.skills[lang], href: "#skills" },
     { label: t.nav.education[lang], href: "#education" },
     { label: t.nav.contact[lang], href: "#contact" },

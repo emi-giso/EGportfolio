@@ -3,7 +3,7 @@ export type Lang = "es" | "en";
 export const t = {
   nav: {
     about: { es: "Sobre mí", en: "About" },
-    projects: { es: "Proyectos", en: "Projects" },
+    projects: { es: "Showcase", en: "Showcase" },
     skills: { es: "Skills", en: "Skills" },
     education: { es: "Formación", en: "Background" },
     contact: { es: "Contacto", en: "Contact" },
@@ -18,7 +18,7 @@ export const t = {
       es: "Estrategia, ejecución y resultados medibles.",
       en: "Strategy, execution and measurable results.",
     },
-    cta1: { es: "Ver proyectos", en: "View projects" },
+    cta1: { es: "Ver showcase", en: "Explore showcase" },
     cta2: { es: "Contacto", en: "Get in touch" },
   },
   about: {
@@ -63,7 +63,7 @@ export const t = {
     },
   },
   projects: {
-    label: { es: "Proyectos", en: "Projects" },
+    label: { es: "Showcase", en: "Showcase" },
     heading: {
       es: "Cada marca, un enfoque distinto. Así los abordé.",
       en: "Every brand requires a different approach. Here's how I tackled them.",
@@ -88,13 +88,40 @@ export const t = {
           challenge: "Lograr unir el sistema visual y de contenido de editoriales tan distintas bajo un mismo sentido armónico y profesional.",
           lesson: "La importancia de unificar la voz de marca entre canales internos y externos. La coherencia es lo que construye confianza.",
           quote: "El verdadero desafío no es unificar un mensaje institucional, sino dominar el arte de hablar veinte idiomas literarios distintos al mismo tiempo.",
+          heroMetric: "+146% Growth",
+          metricsComparison: {
+            before: { value: "7,000", label: "Seguidores", detail: "1.2% Engagement" },
+            after: { value: "17,200", label: "Seguidores", detail: "3.8% Engagement" }
+          },
+          keyMetrics: [
+            { value: "+146%", label: "Crecimiento Followers" },
+            { value: "+216%", label: "Aumento Engagement" },
+            { value: "+260%", label: "Incremento Reach" },
+            { value: "35", label: "Clientes Nuevos" }
+          ],
+          problem: "Riverside tenía una presencia sólida con 7,000 followers, pero su engagement era prácticamente inexistente (1.2%). Los posts conseguían poco alcance y la conversión a clientes era mínima. Necesitaban un cambio estratégico urgente.",
+          strategy: [
+            { title: "Análisis de audiencia", description: "Revisé Meta Analytics y descubrí que el 65% de su audiencia estaba activa en Reels entre 7-9pm. Sus posts eran mayormente carousels a las 12pm." },
+            { title: "Contenido 80/20", description: "Cambié la estrategia: 80% educativo/entretenimiento, 20% promocional. Implementé 3 series temáticas de Reels semanales." },
+            { title: "Optimización de posting", description: "Aumenté de 2x/semana a 4-5x/semana. Usé Google Sheets para trackear qué formatos y horarios daban mejor resultado." }
+          ],
+          insight: "Descubrí que la audiencia de Riverside respondía 4x mejor a video educativo que a carousel posts. Este insight cambió completamente la estrategia y fue el driver principal del crecimiento.",
+          testimonial: {
+            quote: "Emilia no solo creció nuestras redes un 146%, pero lo que realmente me impactó fue cómo entiende el negocio detrás de los números. No es solo una manager, es una strategist.",
+            author: "Responsable Marketing, Riverside"
+          },
           links: [
             { label: "@riversideagency", url: "https://www.instagram.com/riversideagency" },
             { label: "@edhasaargentina", url: "https://www.instagram.com/edhasaargentina" },
             { label: "@hablemosdelbros", url: "https://www.instagram.com/hablemosdelbros" }
           ],
-          images: ["/projects/01-riverside-1.jpg", "/projects/01-riverside-2.jpg", "/projects/01-riverside-3.jpg"],
+          images: ["/EGportfolio/placeholder.svg"],
           reels: [
+            "https://www.instagram.com/p/DVwas5jkc0I/",
+            "https://www.instagram.com/p/DVGjFaJkTHz/",
+            "https://www.instagram.com/p/DOy7ROBCTBH/",
+            "https://www.instagram.com/p/DPJgXTqD8NU/",
+            "https://www.instagram.com/p/DNyLA2W3oqr/",
             "https://www.instagram.com/reel/DPEg-OzjWTB",
             "https://www.instagram.com/reel/DHUAFtgRUv1",
             "https://www.instagram.com/reel/DFqAWtwRd_X",
@@ -114,12 +141,26 @@ export const t = {
           challenge: "Comunicar un servicio de lujo en redes sociales requiere un tono aspiracional pero accesible, premium pero no distante.",
           lesson: "El contenido premium funciona cuando deja de intentar parecer lujoso. Los mejores resultados surgen de mostrar la experiencia real.",
           quote: "El contenido premium no se trata de filtros dorados — se trata de contar una historia que genere conexión.",
-          links: [{ label: "@welojets", url: "https://www.instagram.com/welojets" }],
-          images: [
-            "/projects/WELO/1 (1).jpg",
-            "/projects/WELO/averiguar avion.jpg",
-            "/projects/WELO/EMPTY LEGS.mp4"
+          heroMetric: "+21% Growth",
+          metricsComparison: {
+            before: { value: "7,800", label: "Followers IG", detail: "Bajo alcance" },
+            after: { value: "9,000", label: "Followers IG", detail: "2.9% Engagement" }
+          },
+          keyMetrics: [
+            { value: "+15%", label: "Crecimiento IG" },
+            { value: "+21%", label: "Crecimiento LinkedIn" },
+            { value: "221K+", label: "Impresiones" },
+            { value: "5.9%", label: "Engagement Prom." }
           ],
+          problem: "WeloJets necesitaba profesionalizar su presencia digital para atraer a un público de alto nivel adquisitivo. La comunicación era esporádica y no reflejaba la exclusividad del servicio de aviación privada.",
+          strategy: [
+            { title: "Tono aspiracional", description: "Desarrollé una línea editorial que combina la exclusividad del servicio con contenidos educativos sobre destinos y curiosidades de la aviación." },
+            { title: "LinkedIn Outreach", description: "Potencié la presencia en LinkedIn con contenido B2B estratégico, logrando picos de engagement del 7.38%." },
+            { title: "Meta Ads", description: "Gestioné campañas de pauta orientadas a conversión, segmentando específicamente a usuarios interesados en viajes de lujo y negocios." }
+          ],
+          insight: "El contenido premium funciona cuando deja de intentar 'parecer' lujoso y empieza a mostrar el valor real de la experiencia y el ahorro de tiempo.",
+          links: [{ label: "@welojets", url: "https://www.instagram.com/welojets" }],
+          images: ["/EGportfolio/projects/WELO/1 (1).jpg", "/EGportfolio/projects/WELO/averiguar avion.jpg", "/EGportfolio/projects/WELO/EMPTY LEGS.mp4"],
           reels: [
             "https://www.instagram.com/reel/C3QhQMbO4Br",
             "https://www.instagram.com/reel/C1Pd2RJukmD",
@@ -143,12 +184,7 @@ export const t = {
           lesson: "Adaptar la voz a cada proyecto sin perder la identidad de la productora. La versatilidad es clave.",
           quote: "La publicidad no espera. Comunicar una productora exige la misma velocidad y precisión quirúrgica que ocurre detrás de las cámaras.",
           links: [{ label: "@huincacine", url: "https://www.instagram.com/huincacine" }],
-          images: [
-            "/projects/HUINCA/20220201_143755.jpg",
-            "/projects/HUINCA/20220309_174358.jpg",
-            "/projects/HUINCA/HUINCA CINE 2022.jpg",
-            "/projects/HUINCA/20220201_153216.mp4"
-          ]
+          images: ["/EGportfolio/projects/HUINCA/20220201_143755.jpg", "/EGportfolio/projects/HUINCA/20220309_174358.jpg", "/EGportfolio/projects/HUINCA/HUINCA CINE 2022.jpg", "/EGportfolio/projects/HUINCA/20220201_153216.mp4"]
         },
         {
           number: "04", category: "Community Management · Freelance", title: "Neterwalk · Yamaneat · Grupo Octubre · Festival Wateke", role: "Community Manager Freelance · Marzo 2023 – Presente",
@@ -163,10 +199,7 @@ export const t = {
           challenge: "Mantener la coherencia de cuatro voces de marca distintas sin perder autenticidad ni eficiencia operativa.",
           lesson: "La organización y los sistemas de trabajo son tan importantes como la creatividad para escalar la gestión de múltiples cuentas.",
           quote: "Gestionar múltiples marcas enseña que cada comunidad tiene su lenguaje — y hay que hablarlo con propiedad.",
-          links: [
-            { label: "@neterwalk", url: "https://www.instagram.com/neterwalk" },
-            { label: "@yamaneat.veg", url: "https://www.instagram.com/yamaneat.veg" }
-          ],
+          images: ["/EGportfolio/projects/HUINCA/SHOOTING_HISTORIAS EXPRESS-03.jpg"],
           galleries: [
             {
               title: "Yamaneat",
@@ -191,7 +224,7 @@ export const t = {
           ],
           challenge: "En un set de filmación no existe el 'después lo arreglo'. Cada minuto cuenta y cada error tiene un costo directo.",
           lesson: "La producción es comunicación en su forma más directa: se coordinan personas, tiempos, recursos y expectativas.",
-          quote: "El set enseña algo que ningún libro puede: a resolver bajo presión, en silencio, y bien.",
+          images: ["/EGportfolio/projects/HUINCA/20220201_144049.jpg"],
         },
       ],
       en: [
@@ -208,13 +241,40 @@ export const t = {
           challenge: "Uniting the visual and content systems of very different publishing houses under a single, harmonious brand sense.",
           lesson: "The importance of unifying brand voice across internal and external channels. Consistency is what builds trust.",
           quote: "The true challenge isn't unifying a corporate message, but mastering the art of speaking twenty different literary languages at the same time.",
+          heroMetric: "+146% Growth",
+          metricsComparison: {
+            before: { value: "7,000", label: "Followers", detail: "1.2% Engagement" },
+            after: { value: "17,200", label: "Followers", detail: "3.8% Engagement" }
+          },
+          keyMetrics: [
+            { value: "+146%", label: "Follower Growth" },
+            { value: "+216%", label: "Engagement Increase" },
+            { value: "+260%", label: "Reach Increase" },
+            { value: "35", label: "New Clients" }
+          ],
+          problem: "Riverside had a solid presence with 7,000 followers, but their engagement was practically non-existent (1.2%). Posts got little reach and conversion to clients was minimal. They needed an urgent strategic shift.",
+          strategy: [
+            { title: "Audience Analysis", description: "I reviewed Meta Analytics and discovered that 65% of their audience was active on Reels between 7-9pm. Their posts were mostly carousels at 12pm." },
+            { title: "80/20 Content", description: "Shifted the strategy: 80% educational/entertainment, 20% promotional. Implemented 3 weekly thematic Reel series." },
+            { title: "Posting Optimization", description: "Increased from 2x/week to 4-5x/week. Used Google Sheets to track which formats and times yielded better results." }
+          ],
+          insight: "I discovered that Riverside's audience responded 4x better to educational video than carousel posts. This insight completely changed the strategy and was the main driver of growth.",
+          testimonial: {
+            quote: "Emilia didn't just grow our networks by 146%, but what really impacted me was how she understands the business behind the numbers. She's not just a manager, she's a strategist.",
+            author: "Marketing Manager, Riverside"
+          },
           links: [
             { label: "@riversideagency", url: "https://www.instagram.com/riversideagency" },
             { label: "@edhasaargentina", url: "https://www.instagram.com/edhasaargentina" },
             { label: "@hablemosdelbros", url: "https://www.instagram.com/hablemosdelbros" }
           ],
-          images: ["/projects/01-riverside-1.jpg", "/projects/01-riverside-2.jpg", "/projects/01-riverside-3.jpg"],
+          images: ["/EGportfolio/placeholder.svg"],
           reels: [
+            "https://www.instagram.com/p/DVwas5jkc0I/",
+            "https://www.instagram.com/p/DVGjFaJkTHz/",
+            "https://www.instagram.com/p/DOy7ROBCTBH/",
+            "https://www.instagram.com/p/DPJgXTqD8NU/",
+            "https://www.instagram.com/p/DNyLA2W3oqr/",
             "https://www.instagram.com/reel/DPEg-OzjWTB",
             "https://www.instagram.com/reel/DHUAFtgRUv1",
             "https://www.instagram.com/reel/DFqAWtwRd_X",
@@ -234,12 +294,26 @@ export const t = {
           challenge: "Communicating a luxury service on social media requires a tone that is aspirational yet approachable, premium but not distant.",
           lesson: "Premium content works when it stops trying to appear luxurious. The strongest results come from showcasing the real experience.",
           quote: "Premium content is not about gold filters — it is about telling a story that creates genuine connection.",
-          links: [{ label: "@welojets", url: "https://www.instagram.com/welojets" }],
-          images: [
-            "/projects/WELO/1 (1).jpg",
-            "/projects/WELO/averiguar avion.jpg",
-            "/projects/WELO/EMPTY LEGS.mp4"
+          heroMetric: "+21% Growth",
+          metricsComparison: {
+            before: { value: "7,800", label: "IG Followers", detail: "Low reach" },
+            after: { value: "9,000", label: "IG Followers", detail: "2.9% Engagement" }
+          },
+          keyMetrics: [
+            { value: "+15%", label: "IG Growth" },
+            { value: "+21%", label: "LinkedIn Growth" },
+            { value: "221K+", label: "Impressions" },
+            { value: "5.9%", label: "Avg. Engagement" }
           ],
+          problem: "WeloJets needed to professionalize its digital presence to attract a high-net-worth audience. Communication was sporadic and didn't reflect the exclusivity of the private aviation service.",
+          strategy: [
+            { title: "Aspirational Tone", description: "Developed an editorial line that combines service exclusivity with educational content about destinations and aviation curiosities." },
+            { title: "LinkedIn Outreach", description: "Enhanced LinkedIn presence with strategic B2B content, achieving engagement peaks of 7.38%." },
+            { title: "Meta Ads", description: "Managed conversion-oriented ad campaigns, specifically targeting users interested in luxury travel and business." }
+          ],
+          insight: "Premium content works when it stops trying to 'look' luxurious and starts showing the real value of the experience and time savings.",
+          links: [{ label: "@welojets", url: "https://www.instagram.com/welojets" }],
+          images: ["/EGportfolio/projects/WELO/1 (1).jpg", "/EGportfolio/projects/WELO/averiguar avion.jpg", "/EGportfolio/projects/WELO/EMPTY LEGS.mp4"],
           reels: [
             "https://www.instagram.com/reel/C3QhQMbO4Br",
             "https://www.instagram.com/reel/C1Pd2RJukmD",
@@ -263,12 +337,7 @@ export const t = {
           lesson: "Adapting voice to each project without losing the production company's identity. Versatility is essential.",
           quote: "Advertising doesn't wait. Communicating for a production company demands the same speed and surgical precision that happens behind the cameras.",
           links: [{ label: "@huincacine", url: "https://www.instagram.com/huincacine" }],
-          images: [
-            "/projects/HUINCA/20220201_143755.jpg",
-            "/projects/HUINCA/20220309_174358.jpg",
-            "/projects/HUINCA/HUINCA CINE 2022.jpg",
-            "/projects/HUINCA/20220201_153216.mp4"
-          ]
+          images: ["/EGportfolio/projects/HUINCA/20220201_143755.jpg", "/EGportfolio/projects/HUINCA/20220309_174358.jpg", "/EGportfolio/projects/HUINCA/HUINCA CINE 2022.jpg", "/EGportfolio/projects/HUINCA/20220201_153216.mp4"]
         },
         {
           number: "04", category: "Community Management · Freelance", title: "Neterwalk · Yamaneat · Grupo Octubre · Festival Wateke", role: "Freelance Community Manager · March 2023 – Present",
@@ -283,6 +352,7 @@ export const t = {
           challenge: "Maintaining the coherence of four distinct brand voices without sacrificing authenticity or operational efficiency.",
           lesson: "Organization and workflow systems are as important as creativity when scaling multi-account management.",
           quote: "Managing multiple brands teaches that every community has its own language — and it must be spoken with precision.",
+          images: ["/EGportfolio/projects/HUINCA/SHOOTING_HISTORIAS EXPRESS-03.jpg"],
           links: [
             { label: "@neterwalk", url: "https://www.instagram.com/neterwalk" },
             { label: "@yamaneat", url: "https://www.instagram.com/yamaneat" }
@@ -312,6 +382,7 @@ export const t = {
           challenge: "On a film set, there is no 'I'll fix it later.' Every minute counts, and every mistake has a direct cost.",
           lesson: "Production is communication in its most direct form: coordinating people, timelines, resources and expectations.",
           quote: "The set teaches something no textbook can: how to solve problems under pressure, quietly, and well.",
+          images: ["/EGportfolio/projects/HUINCA/20220201_144049.jpg"],
         },
       ],
     },
