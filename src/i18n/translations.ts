@@ -106,10 +106,6 @@ export const t = {
             { title: "Optimización de posting", description: "Aumenté de 2x/semana a 4-5x/semana. Usé Google Sheets para trackear qué formatos y horarios daban mejor resultado." }
           ],
           insight: "Descubrí que la audiencia de Riverside respondía 4x mejor a video educativo que a carousel posts. Este insight cambió completamente la estrategia y fue el driver principal del crecimiento.",
-          testimonial: {
-            quote: "Emilia no solo creció nuestras redes un 146%, pero lo que realmente me impactó fue cómo entiende el negocio detrás de los números. No es solo una manager, es una strategist.",
-            author: "Responsable Marketing, Riverside"
-          },
           links: [
             { label: "@riversideagency", url: "https://www.instagram.com/riversideagency" },
             { label: "@edhasaargentina", url: "https://www.instagram.com/edhasaargentina" },
@@ -140,7 +136,6 @@ export const t = {
           ],
           challenge: "Comunicar un servicio de lujo en redes sociales requiere un tono aspiracional pero accesible, premium pero no distante.",
           lesson: "El contenido premium funciona cuando deja de intentar parecer lujoso. Los mejores resultados surgen de mostrar la experiencia real.",
-          quote: "El contenido premium no se trata de filtros dorados — se trata de contar una historia que genere conexión.",
           heroMetric: "+21% Growth",
           metricsComparison: {
             before: { value: "7,800", label: "Followers IG", detail: "Bajo alcance" },
@@ -160,7 +155,7 @@ export const t = {
           ],
           insight: "El contenido premium funciona cuando deja de intentar 'parecer' lujoso y empieza a mostrar el valor real de la experiencia y el ahorro de tiempo.",
           links: [{ label: "@welojets", url: "https://www.instagram.com/welojets" }],
-          images: ["/EGportfolio/projects/WELO/1 (1).jpg", "/EGportfolio/projects/WELO/averiguar avion.jpg", "/EGportfolio/projects/WELO/EMPTY LEGS.mp4"],
+          images: ["/EGportfolio/projects/WELO/averiguar avion.jpg", "/EGportfolio/projects/WELO/1 (1).jpg", "/EGportfolio/projects/WELO/EMPTY LEGS.mp4"],
           reels: [
             "https://www.instagram.com/reel/C3QhQMbO4Br",
             "https://www.instagram.com/reel/C1Pd2RJukmD",
@@ -182,7 +177,6 @@ export const t = {
           ],
           challenge: "En la publicidad el ritmo es vertiginoso y la estética lo es todo. El reto es generar contenido que refleje la excelencia técnica de un set en tiempo real.",
           lesson: "Adaptar la voz a cada proyecto sin perder la identidad de la productora. La versatilidad es clave.",
-          quote: "La publicidad no espera. Comunicar una productora exige la misma velocidad y precisión quirúrgica que ocurre detrás de las cámaras.",
           links: [{ label: "@huincacine", url: "https://www.instagram.com/huincacine" }],
           images: ["/EGportfolio/projects/HUINCA/20220201_143755.jpg", "/EGportfolio/projects/HUINCA/20220309_174358.jpg", "/EGportfolio/projects/HUINCA/HUINCA CINE 2022.jpg", "/EGportfolio/projects/HUINCA/20220201_153216.mp4"]
         },
@@ -198,7 +192,6 @@ export const t = {
           ],
           challenge: "Mantener la coherencia de cuatro voces de marca distintas sin perder autenticidad ni eficiencia operativa.",
           lesson: "La organización y los sistemas de trabajo son tan importantes como la creatividad para escalar la gestión de múltiples cuentas.",
-          quote: "Gestionar múltiples marcas enseña que cada comunidad tiene su lenguaje — y hay que hablarlo con propiedad.",
           images: ["/EGportfolio/projects/HUINCA/SHOOTING_HISTORIAS EXPRESS-03.jpg"],
           galleries: [
             {
@@ -259,10 +252,6 @@ export const t = {
             { title: "Posting Optimization", description: "Increased from 2x/week to 4-5x/week. Used Google Sheets to track which formats and times yielded better results." }
           ],
           insight: "I discovered that Riverside's audience responded 4x better to educational video than carousel posts. This insight completely changed the strategy and was the main driver of growth.",
-          testimonial: {
-            quote: "Emilia didn't just grow our networks by 146%, but what really impacted me was how she understands the business behind the numbers. She's not just a manager, she's a strategist.",
-            author: "Marketing Manager, Riverside"
-          },
           links: [
             { label: "@riversideagency", url: "https://www.instagram.com/riversideagency" },
             { label: "@edhasaargentina", url: "https://www.instagram.com/edhasaargentina" },
@@ -293,7 +282,6 @@ export const t = {
           ],
           challenge: "Communicating a luxury service on social media requires a tone that is aspirational yet approachable, premium but not distant.",
           lesson: "Premium content works when it stops trying to appear luxurious. The strongest results come from showcasing the real experience.",
-          quote: "Premium content is not about gold filters — it is about telling a story that creates genuine connection.",
           heroMetric: "+21% Growth",
           metricsComparison: {
             before: { value: "7,800", label: "IG Followers", detail: "Low reach" },
@@ -313,7 +301,7 @@ export const t = {
           ],
           insight: "Premium content works when it stops trying to 'look' luxurious and starts showing the real value of the experience and time savings.",
           links: [{ label: "@welojets", url: "https://www.instagram.com/welojets" }],
-          images: ["/EGportfolio/projects/WELO/1 (1).jpg", "/EGportfolio/projects/WELO/averiguar avion.jpg", "/EGportfolio/projects/WELO/EMPTY LEGS.mp4"],
+          images: ["/EGportfolio/projects/WELO/averiguar avion.jpg", "/EGportfolio/projects/WELO/1 (1).jpg", "/EGportfolio/projects/WELO/EMPTY LEGS.mp4"],
           reels: [
             "https://www.instagram.com/reel/C3QhQMbO4Br",
             "https://www.instagram.com/reel/C1Pd2RJukmD",
@@ -335,7 +323,6 @@ export const t = {
           ],
           challenge: "In advertising, the pace is relentless and aesthetics are everything. The challenge is generating content that reflects technical on-set excellence in real time.",
           lesson: "Adapting voice to each project without losing the production company's identity. Versatility is essential.",
-          quote: "Advertising doesn't wait. Communicating for a production company demands the same speed and surgical precision that happens behind the cameras.",
           links: [{ label: "@huincacine", url: "https://www.instagram.com/huincacine" }],
           images: ["/EGportfolio/projects/HUINCA/20220201_143755.jpg", "/EGportfolio/projects/HUINCA/20220309_174358.jpg", "/EGportfolio/projects/HUINCA/HUINCA CINE 2022.jpg", "/EGportfolio/projects/HUINCA/20220201_153216.mp4"]
         },
@@ -351,7 +338,6 @@ export const t = {
           ],
           challenge: "Maintaining the coherence of four distinct brand voices without sacrificing authenticity or operational efficiency.",
           lesson: "Organization and workflow systems are as important as creativity when scaling multi-account management.",
-          quote: "Managing multiple brands teaches that every community has its own language — and it must be spoken with precision.",
           images: ["/EGportfolio/projects/HUINCA/SHOOTING_HISTORIAS EXPRESS-03.jpg"],
           links: [
             { label: "@neterwalk", url: "https://www.instagram.com/neterwalk" },
@@ -381,7 +367,6 @@ export const t = {
           ],
           challenge: "On a film set, there is no 'I'll fix it later.' Every minute counts, and every mistake has a direct cost.",
           lesson: "Production is communication in its most direct form: coordinating people, timelines, resources and expectations.",
-          quote: "The set teaches something no textbook can: how to solve problems under pressure, quietly, and well.",
           images: ["/EGportfolio/projects/HUINCA/20220201_144049.jpg"],
         },
       ],
