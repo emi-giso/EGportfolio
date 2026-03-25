@@ -115,7 +115,7 @@ export const t = {
             { label: "@edhasaargentina", url: "https://www.instagram.com/edhasaargentina" },
             { label: "@hablemosdelbros", url: "https://www.instagram.com/hablemosdelbros" }
           ],
-          images: ["/EGportfolio/placeholder.svg"],
+          images: [],
           reels: [
             "https://www.instagram.com/p/DVwas5jkc0I/",
             "https://www.instagram.com/p/DVGjFaJkTHz/",
@@ -268,7 +268,7 @@ export const t = {
             { label: "@edhasaargentina", url: "https://www.instagram.com/edhasaargentina" },
             { label: "@hablemosdelbros", url: "https://www.instagram.com/hablemosdelbros" }
           ],
-          images: ["/EGportfolio/placeholder.svg"],
+          images: [],
           reels: [
             "https://www.instagram.com/p/DVwas5jkc0I/",
             "https://www.instagram.com/p/DVGjFaJkTHz/",
