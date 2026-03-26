@@ -5,7 +5,6 @@ import { t } from "@/i18n/translations";
 export const Education = () => {
   const { lang } = useLanguage();
   const timeline = t.education.timeline[lang];
-  const volunteer = t.education.volunteer[lang];
 
   return (
     <section id="education" className="py-32 md:py-40 section-padding">
@@ -19,8 +18,8 @@ export const Education = () => {
           </h2>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 gap-16">
-          <div className="relative">
+        <div className="max-w-3xl mx-auto">
+          <div className="relative ml-4 md:ml-0">
             <div className="absolute left-[7px] top-2 bottom-2 w-px bg-border" />
             <div className="space-y-8">
               {timeline.map((item, i) => (
@@ -32,24 +31,6 @@ export const Education = () => {
                       <h4 className="font-display font-semibold text-foreground">{item.title}</h4>
                       <p className="text-sm text-muted-foreground">{item.org}</p>
                     </div>
-                  </div>
-                </ScrollReveal>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <ScrollReveal>
-              <h3 className="font-display text-xl font-bold mb-8 text-foreground">
-                {t.education.volunteerTitle[lang]}
-              </h3>
-            </ScrollReveal>
-            <div className="space-y-6">
-              {volunteer.map((item, i) => (
-                <ScrollReveal key={i} delay={0.1 + i * 0.1}>
-                  <div className="bg-card border border-border rounded-xl p-6 hover-lift">
-                    <h4 className="font-display font-semibold text-foreground mb-2">{item.title}</h4>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
                   </div>
                 </ScrollReveal>
               ))}

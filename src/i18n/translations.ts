@@ -38,8 +38,8 @@ export const t = {
       en: "My profile spans the full cycle: strategic planning, content production, ad management, live coverage, metrics analysis and continuous optimization. End to end.",
     },
     quote: {
-      es: "Me interesa la comunicación que resuelve problemas reales, no la que llena grillas por cumplir.",
-      en: "I value communication that solves real problems — not the kind that fills content calendars for the sake of it.",
+      es: "Me apasiona descubrir la historia detrás de cada proyecto, traduciendo conceptos profundos en relatos simples y poderosos que resuenan con el público.",
+      en: "I am passionate about discovering the story behind every project, translating deep concepts into simple, powerful narratives that resonate with the audience.",
     },
     p3: {
       es: "Licenciada en Ciencias de la Comunicación (UADE), inglés C2 (Cambridge Proficiency) e intercambio académico en Madrid (UC3M).",
@@ -100,11 +100,11 @@ export const t = {
             { value: "+260%", label: "Incremento Reach" },
             { value: "35", label: "Clientes Nuevos" }
           ],
-          problem: "Riverside tenía una presencia sólida con 7,000 followers, pero su engagement era prácticamente inexistente (1.2%). Los posts conseguían poco alcance y la conversión a clientes era mínima. Necesitaban un cambio estratégico urgente.",
+          problem: "Impulsar el crecimiento orgánico, coordinar el lanzamiento de campañas nacionales y actuar como nexo principal de comunicación institucional entre más de 25 sellos editoriales, prensa y red de librerías.",
           strategy: [
-            { title: "Análisis de audiencia", description: "Revisé Meta Analytics y descubrí que el 65% de su audiencia estaba activa en Reels entre 7-9pm. Sus posts eran mayormente carousels a las 12pm." },
-            { title: "Contenido 80/20", description: "Cambié la estrategia: 80% educativo/entretenimiento, 20% promocional. Implementé 3 series temáticas de Reels semanales." },
-            { title: "Optimización de posting", description: "Aumenté de 2x/semana a 4-5x/semana. Usé Google Sheets para trackear qué formatos y horarios daban mejor resultado." }
+            { title: "Crecimiento Orgánico", description: "Logré un aumento del +146% en @riverside (7K→17.2K), +170% en @hablemosdelbros (4K→10.8K) y +167% en @edhasa (3K→8K)." },
+            { title: "Campañas y Eventos", description: "Coordinación de 2 campañas nacionales 'Suelta de Libros', Día del Niño y Semana Negra integrando activaciones presenciales, digital, email marketing e influencers." },
+            { title: "Feria del Libro y Prensa", description: "Fui el agente principal de comunicación en la Feria del Libro y produje más de 10 presentaciones de libros con autores y prensa." }
           ],
           insight: "Descubrí que la audiencia de Riverside respondía 4x mejor a video educativo que a carousel posts. Este insight cambió completamente la estrategia y fue el driver principal del crecimiento.",
           links: [
@@ -152,11 +152,11 @@ export const t = {
             { value: "221K+", label: "Impresiones" },
             { value: "5.9%", label: "Engagement Prom." }
           ],
-          problem: "WeloJets necesitaba profesionalizar su presencia digital para atraer a un público de alto nivel adquisitivo. La comunicación era esporádica y no reflejaba la exclusividad del servicio de aviación privada.",
+          problem: "Desarrollar y optimizar una estrategia de contenido 'end-to-end' en múltiples plataformas digitales para una marca de aviación privada, orientada al crecimiento de la comunidad y la captación de leads.",
           strategy: [
-            { title: "Tono aspiracional", description: "Desarrollé una línea editorial que combina la exclusividad del servicio con contenidos educativos sobre destinos y curiosidades de la aviación." },
-            { title: "LinkedIn Outreach", description: "Potencié la presencia en LinkedIn con contenido B2B estratégico, logrando picos de engagement del 7.38%." },
-            { title: "Meta Ads", description: "Gestioné campañas de pauta orientadas a conversión, segmentando específicamente a usuarios interesados en viajes de lujo y negocios." }
+            { title: "Estrategia de Crecimiento en IG", description: "Aumento del 15% en seguidores (7.8K→9K), manteniendo un engagement rate de 2.9%, 596 likes/mes promedio y generando más de 221K impresiones acumuladas." },
+            { title: "Expansión B2B en LinkedIn", description: "Crecimiento del 21% (3K→3.7K) con picos de engagement rate del 7.38%, alcanzando 1.300+ reacciones y 47K+ impresiones." },
+            { title: "Marketing Multicanal", description: "Implementación estratégica en Instagram, LinkedIn, Facebook y blog, sumando la gestión de pauta en Meta Ads, redacción de copies y reportes de KPIs mensuales." }
           ],
           insight: "El contenido premium funciona cuando deja de intentar 'parecer' lujoso y empieza a mostrar el valor real de la experiencia y el ahorro de tiempo.",
           links: [{ label: "@welojets", url: "https://www.instagram.com/welojets" }],
@@ -181,6 +181,12 @@ export const t = {
             "Traducciones profesionales inglés-español para materiales de difusión",
           ],
           challenge: "En la publicidad el ritmo es vertiginoso y la estética lo es todo. El reto es generar contenido que refleje la excelencia técnica de un set en tiempo real.",
+          problem: "Gestionar la cobertura en tiempo real de rodajes publicitarios simultáneos y mantener el vínculo institucional con directores, periodistas y medios especializados.",
+          strategy: [
+            { title: "Cobertura en Sets y Pitches", description: "Realicé la cobertura presencial en rodajes y pitches para marcas de primera línea como Dove, Unilever y Sedal." },
+            { title: "Producción de Contenido Digital", description: "Producción autónoma de reels, posteos y piezas gráficas para nutrir los canales digitales del proyecto publicitario." },
+            { title: "Relaciones Públicas", description: "Actué como enlace directo con periodistas, directores y medios publicitarios, incluyendo traducción de materiales de difusión." }
+          ],
           lesson: "Adaptar la voz a cada proyecto sin perder la identidad de la productora. La versatilidad es clave.",
           links: [{ label: "@huincacine", url: "https://www.instagram.com/huincacine" }],
           images: mediaManifest.HUINCA,
@@ -197,6 +203,12 @@ export const t = {
             "Crecimientos del 20–40% en seguidores en cuentas activas",
           ],
           challenge: "Mantener la coherencia de cuatro voces de marca distintas sin perder autenticidad ni eficiencia operativa.",
+          problem: "Gestionar en simultáneo el ecosistema digital de múltiples cuentas con identidades de marca completamente diferenciadas, manteniendo la constancia y la calidad.",
+          strategy: [
+            { title: "Gestión Integral Multimarca", description: "Planificación de calendarios editoriales, diseño de piezas visuales a medida y administración simultánea de 4 cuentas (Neterwalk, Yamaneat, Grupo Octubre, Festival Wateke)." },
+            { title: "Impacto en Seguidores", description: "Logro de crecimientos orgánicos y consistentes de entre el 20% y el 40% en seguidores en las cuentas activas bajo mi gestión." },
+            { title: "Cobertura Dinámica", description: "Realización de coberturas en vivo de los eventos vinculados a las marcas, generando contenido de valor y en tiempo real para las comunidades." }
+          ],
           lesson: "La organización y los sistemas de trabajo son tan importantes como la creatividad para escalar la gestión de múltiples cuentas.",
           images: [
             "/EGportfolio/projects/HUINCA/Screenshot_20220524-152722_Instagram.jpg",
@@ -205,6 +217,7 @@ export const t = {
           galleries: [
             {
               title: "Yamaneat",
+              link: { label: "@yamaneat", url: "https://www.instagram.com/yamaneat" },
               images: [],
               reels: [
                 "https://www.instagram.com/p/DWMxJHRkQ8x/",
@@ -215,8 +228,12 @@ export const t = {
             },
             {
               title: "Neterwalk",
+              link: { label: "@neterwalk", url: "https://www.instagram.com/neterwalk" },
               images: [],
-              reels: []
+              reels: [
+                "https://www.instagram.com/p/DTiq-n0AJZ9/",
+                "https://www.instagram.com/reel/DU_g8B7gdcM/"
+              ]
             }
           ]
         },
@@ -230,6 +247,12 @@ export const t = {
             "Resolución de imprevistos en tiempo real",
           ],
           challenge: "En un set de filmación no existe el 'después lo arreglo'. Cada minuto cuenta y cada error tiene un costo directo.",
+          problem: "Articular las necesidades de múltiples departamentos técnicos y creativos bajo la presión operativa de un set de filmación publicitaria internacional.",
+          strategy: [
+            { title: "Coordinación Logística", description: "Asistencia integral en sets publicitarios para marcas de alcance internacional como Avon, Ron Don Q y Just." },
+            { title: "Soporte Institucional y Directivo", description: "Soporte directo al equipo de dirección, garantizando el flujo de trabajo y la comunicación efectiva entre todas las áreas técnicas." },
+            { title: "Resolución Estratégica", description: "Toma de decisiones rápidas y resolución de imprevistos logísticos o técnicos en tiempo real durante las jornadas de rodaje." }
+          ],
           lesson: "La producción es comunicación en su forma más directa: se coordinan personas, tiempos, recursos y expectativas.",
           images: ["/EGportfolio/projects/HUINCA/20220201_144049.jpg"],
           hideGallery: true,
@@ -259,11 +282,11 @@ export const t = {
             { value: "+260%", label: "Reach Increase" },
             { value: "35", label: "New Clients" }
           ],
-          problem: "Riverside had a solid presence with 7,000 followers, but their engagement was practically non-existent (1.2%). Posts got little reach and conversion to clients was minimal. They needed an urgent strategic shift.",
+          problem: "Drive organic community growth, roll out national campaigns, and act as the core institutional communication liaison for over 25 publishing imprints, press outlets, and bookstore networks.",
           strategy: [
-            { title: "Audience Analysis", description: "I reviewed Meta Analytics and discovered that 65% of their audience was active on Reels between 7-9pm. Their posts were mostly carousels at 12pm." },
-            { title: "80/20 Content", description: "Shifted the strategy: 80% educational/entertainment, 20% promotional. Implemented 3 weekly thematic Reel series." },
-            { title: "Posting Optimization", description: "Increased from 2x/week to 4-5x/week. Used Google Sheets to track which formats and times yielded better results." }
+            { title: "Organic Audience Growth", description: "Boosted followers by +146% for @riverside (7K→17.2K), +170% for @hablemosdelbros (4K→10.8K), and +167% for @edhasa (3K→8K)." },
+            { title: "National Campaigns & Activations", description: "Coordinated two nationwide 'Suelta de Libros' campaigns, plus major Children's Day and Semana Negra activations, integrating digital tools, influencer marketing, and email efforts." },
+            { title: "Events & Press Liaison", description: "Served as the primary communications agent at the Book Fair, actively producing 10+ book launch events alongside authors and media." }
           ],
           insight: "I discovered that Riverside's audience responded 4x better to educational video than carousel posts. This insight completely changed the strategy and was the main driver of growth.",
           links: [
@@ -311,11 +334,11 @@ export const t = {
             { value: "221K+", label: "Impressions" },
             { value: "5.9%", label: "Avg. Engagement" }
           ],
-          problem: "WeloJets needed to professionalize its digital presence to attract a high-net-worth audience. Communication was sporadic and didn't reflect the exclusivity of the private aviation service.",
+          problem: "Establish and optimize an end-to-end content framework across digital channels to elevate a luxury private aviation brand, focusing on lead acquisition and community building.",
           strategy: [
-            { title: "Aspirational Tone", description: "Developed an editorial line that combines service exclusivity with educational content about destinations and aviation curiosities." },
-            { title: "LinkedIn Outreach", description: "Enhanced LinkedIn presence with strategic B2B content, achieving engagement peaks of 7.38%." },
-            { title: "Meta Ads", description: "Managed conversion-oriented ad campaigns, specifically targeting users interested in luxury travel and business." }
+            { title: "Instagram Growth Strategy", description: "Increased follower base by 15% (7.8K→9K), sustaining a 2.9% engagement rate, 596 average monthly likes, and securing over 221K cumulative impressions." },
+            { title: "B2B Expansion on LinkedIn", description: "Grew audience by 21% (3K→3.7K) and achieved engagement rate peaks up to 7.38%, delivering 1,300+ reactions and 47K+ impressions." },
+            { title: "Multichannel Execution", description: "Successfully managed IG, LinkedIn, Facebook, and a corporate blog, while executing Meta Ads campaigns, conversion copywriting, and detailed monthly KPI reporting." }
           ],
           insight: "Premium content works when it stops trying to 'look' luxurious and starts showing the real value of the experience and time savings.",
           links: [{ label: "@welojets", url: "https://www.instagram.com/welojets" }],
@@ -340,6 +363,12 @@ export const t = {
             "Professional English-Spanish translations for press materials",
           ],
           challenge: "In advertising, the pace is relentless and aesthetics are everything. The challenge is generating content that reflects technical on-set excellence in real time.",
+          problem: "Provide real-time digital coverage on fast-paced commercial sets while maintaining tight institutional relationships with directors, journalists, and specialized media.",
+          strategy: [
+            { title: "Pitches & On-Set Coverage", description: "Executed live on-set and pitch coverage for top-tier international scale projects like Dove, Unilever, and Sedal." },
+            { title: "Digital Content Production", description: "Autonomously produced ad-hoc digital assets, including reels, graphics, and social posts to fuel ongoing commercial campaigns." },
+            { title: "Public Relations Interface", description: "Acted as the direct link to journalists, directors, and advertising media, taking charge of all bilingual press material translations." }
+          ],
           lesson: "Adapting voice to each project without losing the production company's identity. Versatility is essential.",
           links: [{ label: "@huincacine", url: "https://www.instagram.com/huincacine" }],
           images: mediaManifest.HUINCA,
@@ -355,18 +384,21 @@ export const t = {
             "20–40% follower growth across active accounts",
           ],
           challenge: "Maintaining the coherence of four distinct brand voices without sacrificing authenticity or operational efficiency.",
+          problem: "Simultaneously managing the digital ecosystem of multiple accounts with completely differentiated brand identities, maintaining consistency and quality.",
+          strategy: [
+            { title: "Integrated Multibrand Management", description: "Planned monthly editorial calendars, designed custom visual assets, and simultaneously managed 4 accounts (Neterwalk, Yamaneat, Grupo Octubre, Festival Wateke)." },
+            { title: "Follower Impact", description: "Achieved organic and consistent growth of 20% to 40% in followers across the active accounts under my management." },
+            { title: "Dynamic Coverage", description: "Provided live coverage of brand-related events, generating valuable and real-time content for the communities." }
+          ],
           lesson: "Organization and workflow systems are as important as creativity when scaling multi-account management.",
           images: [
             "/EGportfolio/projects/HUINCA/Screenshot_20220524-152722_Instagram.jpg",
             "/EGportfolio/projects/HUINCA/Screenshot_20220524-181902_Instagram.jpg"
           ],
-          links: [
-            { label: "@neterwalk", url: "https://www.instagram.com/neterwalk" },
-            { label: "@yamaneat", url: "https://www.instagram.com/yamaneat" }
-          ],
           galleries: [
             {
               title: "Yamaneat",
+              link: { label: "@yamaneat", url: "https://www.instagram.com/yamaneat" },
               images: [],
               reels: [
                 "https://www.instagram.com/p/DWMxJHRkQ8x/",
@@ -377,8 +409,12 @@ export const t = {
             },
             {
               title: "Neterwalk",
+              link: { label: "@neterwalk", url: "https://www.instagram.com/neterwalk" },
               images: [],
-              reels: []
+              reels: [
+                "https://www.instagram.com/p/DTiq-n0AJZ9/",
+                "https://www.instagram.com/reel/DU_g8B7gdcM/"
+              ]
             }
           ]
         },
@@ -392,6 +428,12 @@ export const t = {
             "Real-time problem solving on set",
           ],
           challenge: "On a film set, there is no 'I'll fix it later.' Every minute counts, and every mistake has a direct cost.",
+          problem: "Articulating the needs of multiple technical and creative departments under the operational pressure of an international advertising film set.",
+          strategy: [
+            { title: "Logistics Coordination", description: "Provided comprehensive assistance on advertising sets for international brands such as Avon, Ron Don Q, and Just." },
+            { title: "Institutional & Directorial Support", description: "Direct support to the directing team, ensuring workflow and effective communication between all technical areas." },
+            { title: "Strategic Resolution", description: "Made quick decisions and resolved logistical or technical unforeseen events in real time during shooting days." }
+          ],
           lesson: "Production is communication in its most direct form: coordinating people, timelines, resources and expectations.",
           images: ["/EGportfolio/projects/HUINCA/20220201_144049.jpg"],
           hideGallery: true,
@@ -466,7 +508,6 @@ export const t = {
   education: {
     label: { es: "Formación", en: "Background" },
     heading: { es: "Formación académica y trayectoria", en: "Academic background & career path" },
-    volunteerTitle: { es: "Más allá de lo profesional", en: "Beyond the professional" },
     timeline: {
       es: [
         { year: "2024 – Presente", title: "Comunicadora Integral / Prensa y Redes Sociales", org: "Riverside Agency · Edhasa Argentina" },
@@ -489,16 +530,6 @@ export const t = {
         { year: "2018 – 2021", title: "Bachelor's in Communication Sciences", org: "Universidad Argentina de la Empresa (UADE)" },
         { year: "2021", title: "Cambridge Certificate of Proficiency (C2)", org: "CEFR" },
         { year: "2018", title: "Cambridge Certificate in Advanced English (C1)", org: "CEFR" }
-      ],
-    },
-    volunteer: {
-      es: [
-        { title: "Festival Solidario", desc: "Organización y difusión de eventos solidarios — comunicación aplicada a causas sociales." },
-        { title: "Conduciendo a Conciencia", desc: "2014 – Presente · Más de 12 años de concientización vial. Un compromiso sostenido con impacto real." },
-      ],
-      en: [
-        { title: "Solidarity Festival", desc: "Organizing and promoting charity events — communication applied to social causes." },
-        { title: "Driving with Awareness", desc: "2014 – Present · Over 12 years of road safety awareness. A sustained commitment with real impact." },
       ],
     },
   },

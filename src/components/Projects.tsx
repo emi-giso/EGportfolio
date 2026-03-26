@@ -6,7 +6,7 @@ import { t } from "@/i18n/translations";
 import { ChevronLeft, ChevronRight, X, Layout, Users, Video, BarChart3, Presentation, Globe } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 
-const ProjectGallery = ({ title, images, reels, lang }: { title?: string, images?: readonly string[], reels?: readonly string[], lang: string }) => {
+const ProjectGallery = ({ title, images, reels, lang, link }: { title?: string, images?: readonly string[], reels?: readonly string[], lang: string, link?: { label: string, url: string } }) => {
   const [innerEmblaRef, innerEmblaApi] = useEmblaCarousel({ loop: true, align: "center", dragFree: true });
 
   const scrollPrev = useCallback(() => {
@@ -20,12 +20,25 @@ const ProjectGallery = ({ title, images, reels, lang }: { title?: string, images
   if ((!images || images.length === 0) && (!reels || reels.length === 0)) return null;
 
   return (
-    <div className="mt-24 pt-16 border-t border-border/50 animate-fade-up" style={{ animationDelay: "300ms" }}>
+    <div className="mt-24 pt-16 border-t border-border/50 animate-fade-up relative z-10" style={{ animationDelay: "300ms" }}>
       <div className="flex flex-col md:flex-row items-center justify-between mb-10 gap-6">
         <div>
-          <h4 className="font-display text-xl md:text-2xl font-bold uppercase tracking-widest text-foreground">
-            {title || (lang === "es" ? "Galería Multimedia" : "Media Gallery")}
-          </h4>
+          <div className="flex flex-wrap items-center gap-4">
+            <h4 className="font-display text-xl md:text-2xl font-bold uppercase tracking-widest text-foreground">
+              {title || (lang === "es" ? "Galería Multimedia" : "Media Gallery")}
+            </h4>
+            {link && (
+              <a 
+                href={link.url} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex items-center gap-2 text-xs md:text-sm text-primary hover:text-white bg-primary/10 hover:bg-primary px-4 py-1.5 rounded-full transition-all duration-300 border border-primary/30 hover:border-primary hover:-translate-y-0.5"
+              >
+                <span className="italic font-normal opacity-80">{lang === "es" ? "Visitar" : "Visit"}</span> 
+                <span className="font-bold">{link.label}</span>
+              </a>
+            )}
+          </div>
           <p className="text-muted-foreground text-sm mt-2">
             {lang === "es" ? "Desliza o usa las flechas para explorar" : "Swipe or use arrows to explore"}
           </p>
@@ -404,9 +417,10 @@ const FullProjectView = ({ project, onClose }: { project: any, onClose: () => vo
           )}
 
           {project.galleries ? (
-            <div className="space-y-32">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 relative">
+              <div className="hidden lg:block absolute left-1/2 top-10 bottom-10 w-px bg-gradient-to-b from-transparent via-border to-transparent -translate-x-1/2 pointer-events-none" />
               {project.galleries.map((gallery: any, idx: number) => (
-                <ProjectGallery key={idx} title={gallery.title} images={gallery.images} reels={gallery.reels} lang={lang} />
+                <ProjectGallery key={idx} title={gallery.title} images={gallery.images} reels={gallery.reels} lang={lang} link={gallery.link} />
               ))}
             </div>
           ) : !project.hideGallery && (
