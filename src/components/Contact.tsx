@@ -5,7 +5,7 @@ import { t } from "@/i18n/translations";
 
 const contactLinks = [
   { icon: Mail, label: "emigiso@hotmail.com", href: "mailto:emigiso@hotmail.com" },
-  { icon: Phone, label: "011 6610-0505", href: "tel:+5401166100505" },
+  { icon: Phone, label: "+54 11 6610-0505", href: "tel:+5491166100505" },
   { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/emilia-giso-6690371b8/" },
 ];
 
