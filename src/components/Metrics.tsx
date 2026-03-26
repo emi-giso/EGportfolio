@@ -57,11 +57,11 @@ export const Metrics = () => {
   return (
     <section ref={ref} className="relative py-24 md:py-32 overflow-hidden">
       {/* Decorative line */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-coral/40 to-transparent" />
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-coral/40 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
       
       {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-coral/5 blur-[100px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-primary/5 blur-[100px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto section-padding">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-6">
@@ -73,7 +73,7 @@ export const Metrics = () => {
               transition={{ duration: 0.6, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="text-center group"
             >
-              <p className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-coral mb-3 tabular-nums tracking-tight">
+              <p className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-3 tabular-nums tracking-tight">
                 <CountUp target={metric.value} prefix={metric.prefix} suffix={metric.suffix} />
               </p>
               <p className="text-muted-foreground text-xs md:text-sm uppercase tracking-widest leading-snug">

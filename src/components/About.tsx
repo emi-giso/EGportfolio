@@ -11,7 +11,7 @@ export const About = () => {
     <section id="about" className="py-32 md:py-40 section-padding">
       <div className="max-w-6xl mx-auto">
         <ScrollReveal>
-          <p className="text-coral font-body text-sm uppercase tracking-[0.2em] mb-4">{t.about.label[lang]}</p>
+          <p className="text-primary font-body text-sm uppercase tracking-[0.2em] mb-4">{t.about.label[lang]}</p>
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
@@ -31,7 +31,7 @@ export const About = () => {
             </ScrollReveal>
 
             <ScrollReveal delay={0.4}>
-              <blockquote className="border-l-2 border-coral pl-6 py-2">
+              <blockquote className="border-l-2 border-primary pl-6 py-2">
                 <p className="text-foreground italic text-lg">"{t.about.quote[lang]}"</p>
               </blockquote>
             </ScrollReveal>
@@ -55,7 +55,7 @@ export const About = () => {
             {stats.map((stat, i) => (
               <ScrollReveal key={stat.label} delay={0.2 + i * 0.1} direction={i % 2 === 0 ? "left" : "right"}>
                 <div className="bg-card border border-border rounded-xl p-6 hover-lift">
-                  <p className="font-display text-3xl md:text-4xl font-bold text-coral mb-2">{stat.value}</p>
+                  <p className="font-display text-3xl md:text-4xl font-bold text-primary mb-2">{stat.value}</p>
                   <p className="text-muted-foreground text-sm">{stat.label}</p>
                 </div>
               </ScrollReveal>

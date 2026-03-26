@@ -1,9 +1,8 @@
-import { useState, useCallback } from "react";
-import { motion } from "framer-motion";
+import { useState, useCallback, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ScrollReveal } from "./ScrollReveal";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { t } from "@/i18n/translations";
-import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription, DialogClose } from "@/components/ui/dialog";
 import { ChevronLeft, ChevronRight, X, Layout, Users, Video, BarChart3, Presentation, Globe } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 
@@ -35,13 +34,13 @@ const ProjectGallery = ({ title, images, reels, lang }: { title?: string, images
         <div className="flex gap-4">
           <button 
             onClick={scrollPrev} 
-            className="bg-secondary hover:bg-coral text-foreground hover:text-white p-4 rounded-full transition-all shadow-sm hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-coral/50"
+            className="bg-secondary hover:bg-primary text-foreground hover:text-white p-4 rounded-full transition-all shadow-sm hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
           <button 
             onClick={scrollNext} 
-            className="bg-secondary hover:bg-coral text-foreground hover:text-white p-4 rounded-full transition-all shadow-sm hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-coral/50"
+            className="bg-secondary hover:bg-primary text-foreground hover:text-white p-4 rounded-full transition-all shadow-sm hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
@@ -70,7 +69,7 @@ const ProjectGallery = ({ title, images, reels, lang }: { title?: string, images
             {images?.map((img, idx) => (
               <div className="flex-none h-full relative pl-6 md:pl-12 group mix-blend-normal" key={`img-${idx}`}>
                 <div className="h-full rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 flex items-center justify-center transform transition-transform duration-700 group-hover:scale-[1.02] bg-charcoal/50">
-                  {img.endsWith('.mp4') ? (
+                  {img.endsWith('.mp4') || img.endsWith('.mov') || img.endsWith('.MOV') ? (
                     <video src={img} className="h-full w-auto max-w-none object-contain rounded-2xl pointer-events-none" autoPlay muted loop playsInline />
                   ) : (
                     <img 
@@ -90,126 +89,176 @@ const ProjectGallery = ({ title, images, reels, lang }: { title?: string, images
   );
 };
 
-const ProjectCard = ({ project }: { project: any }) => {
+const ProjectCard = ({ project, onClick }: { project: any, onClick: () => void }) => {
   const { lang } = useLanguage();
 
-  // Determine icon based on category/title
   const getIcon = () => {
     const title = project.title.toLowerCase();
     const cat = project.category.toLowerCase();
-    if (title.includes('agency') || title.includes('gestión')) return <BarChart3 className="w-16 h-16 text-coral" />;
-    if (title.includes('community') || cat.includes('social')) return <Users className="w-16 h-16 text-coral" />;
-    if (cat.includes('audiovisual') || title.includes('cine')) return <Video className="w-16 h-16 text-coral" />;
-    if (title.includes('presentations')) return <Presentation className="w-16 h-16 text-coral" />;
-    if (cat.includes('web')) return <Globe className="w-16 h-16 text-coral" />;
-    return <Layout className="w-16 h-16 text-coral" />;
+    if (title.includes('agency') || title.includes('gestión')) return <BarChart3 className="w-16 h-16 text-primary" />;
+    if (title.includes('community') || cat.includes('social')) return <Users className="w-16 h-16 text-primary" />;
+    if (cat.includes('audiovisual') || title.includes('cine')) return <Video className="w-16 h-16 text-primary" />;
+    if (title.includes('presentations')) return <Presentation className="w-16 h-16 text-primary" />;
+    if (cat.includes('web')) return <Globe className="w-16 h-16 text-primary" />;
+    return <Layout className="w-16 h-16 text-primary" />;
   };
 
   return (
-    <Dialog>
-      <DialogTrigger asChild>
-        <div className="bg-card border border-border/50 rounded-3xl overflow-hidden cursor-pointer flex flex-col group text-left transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_40px_80px_rgba(0,0,0,0.2)] hover:border-coral/40 max-w-4xl mx-auto w-full mb-12 animate-fade-up">
-          {/* Header Image/Icon Area */}
-          <div className="h-64 md:h-80 bg-secondary/30 relative flex items-center justify-center overflow-hidden group-hover:opacity-90 transition-opacity">
-            {project.images && project.images.length > 0 ? (
-              <div className="absolute inset-0 w-full h-full">
-                {project.images[0].endsWith('.mp4') || project.images[0].endsWith('.mov') || project.images[0].endsWith('.MOV') ? (
-                  <video 
-                    src={project.images[0]} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-                    autoPlay muted loop playsInline 
-                  />
-                ) : (
-                  <img 
-                    src={project.images[0]} 
-                    alt={project.title} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                )}
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
-              </div>
+    <motion.div 
+      layoutId={`project-container-${project.number}`}
+      onClick={onClick}
+      className="relative min-h-[600px] md:min-h-[700px] rounded-[2.5rem] overflow-hidden cursor-pointer group flex flex-col justify-end transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_40px_100px_rgba(0,0,0,0.4)] border border-white/5 max-w-5xl mx-auto w-full mb-16"
+    >
+      {/* Full-Card Background Media */}
+      <motion.div 
+        layoutId={`project-bg-${project.number}`}
+        className="absolute inset-0 z-0 overflow-hidden"
+      >
+        {project.images && project.images.length > 0 ? (
+          <>
+            {project.images[0].endsWith('.mp4') || project.images[0].endsWith('.mov') || project.images[0].endsWith('.MOV') ? (
+              <video 
+                src={project.images[0]} 
+                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+                autoPlay muted loop playsInline 
+              />
             ) : (
-              <>
-                <div className="absolute inset-0 bg-gradient-to-br from-coral/5 to-transparent opacity-50" />
-                <div className="relative z-10 transform group-hover:scale-110 transition-transform duration-700">
-                  {getIcon()}
-                </div>
-              </>
+              <img 
+                src={project.images[0]} 
+                alt={project.title} 
+                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+              />
             )}
-            
-            {/* Visual background elements */}
-            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-coral/5 rounded-full blur-3xl group-hover:bg-coral/20 transition-colors duration-700" />
-            <div className="absolute -top-10 -left-10 w-40 h-40 bg-coral/5 rounded-full blur-3xl group-hover:bg-coral/10 transition-colors duration-700" />
-          </div>
-
-          <div className="p-8 md:p-12 flex flex-col bg-gradient-to-br from-card to-background relative overflow-hidden">
-            <div className="flex flex-wrap items-center justify-between mb-8 gap-4">
-              <div className="flex items-center gap-4">
-                <span className="text-coral font-display text-4xl md:text-5xl font-black opacity-20 group-hover:opacity-40 transition-opacity">
-                  {project.number}
-                </span>
-                <span className="text-[10px] md:text-xs text-foreground uppercase tracking-widest font-bold bg-secondary px-4 py-2 rounded-full group-hover:bg-coral group-hover:text-white transition-all duration-300">
-                  {project.category}
-                </span>
-              </div>
-              {project.heroMetric && (
-                <span className="text-[10px] md:text-xs text-coral font-bold uppercase tracking-widest bg-coral/10 px-4 py-2 rounded-full border border-coral/20 transform group-hover:scale-105 transition-transform">
-                  {project.heroMetric}
-                </span>
-              )}
+          </>
+        ) : (
+          <div className="w-full h-full bg-gradient-to-br from-charcoal to-background flex items-center justify-center">
+            <div className="opacity-20 transform group-hover:scale-110 transition-transform duration-1000">
+              {getIcon()}
             </div>
+          </div>
+        )}
+        
+        {/* Visual Overlays for Vibe and Readability (Lowered opacity to 10-15%) */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-primary/5 z-15" />
+      </motion.div>
 
-            <h3 className="font-display text-4xl md:text-5xl font-bold mb-4 group-hover:text-coral transition-colors duration-300 leading-tight">
-              {project.title}
-            </h3>
-            <p className="text-coral text-sm md:text-base font-bold uppercase tracking-widest mb-6 opacity-80">
-              {project.role}
-            </p>
-            <p className="text-muted-foreground leading-relaxed text-lg md:text-xl max-w-3xl">
-              {project.description}
-            </p>
+      {/* Content */}
+      <div className="relative z-20 p-8 md:p-14 mt-auto w-full backdrop-blur-[2px] bg-black/10 border-t border-white/5 group-hover:bg-black/30 transition-all duration-500">
+        <div className="flex flex-wrap items-center justify-between mb-8 gap-4">
+          <div className="flex items-center gap-5">
+            <motion.span 
+              layoutId={`project-number-${project.number}`}
+              className="text-white font-display text-4xl md:text-5xl font-black opacity-30 group-hover:opacity-60 transition-opacity"
+            >
+              {project.number}
+            </motion.span>
+            <motion.span 
+              layoutId={`project-category-${project.number}`}
+              className="text-[10px] md:text-xs text-white uppercase tracking-widest font-bold bg-white/10 backdrop-blur-md px-5 py-2.5 rounded-full border border-white/10 group-hover:bg-primary group-hover:text-white transition-all duration-300"
+            >
+              {project.category}
+            </motion.span>
+          </div>
+        </div>
 
-            <div className="mt-10 flex items-center justify-between items-end">
-              <div className="flex gap-2 flex-wrap">
-                {project.tags?.map((tag: string, i: number) => (
-                  <span key={i} className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground border border-border px-3 py-1.5 rounded-lg">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <button className="text-foreground text-sm font-bold flex items-center gap-4 group-hover:text-white transition-all duration-300 bg-secondary group-hover:bg-coral px-8 py-4 rounded-2xl shadow-sm hover:shadow-xl">
-                <span>{lang === "es" ? "Ver Case Study" : "View Case Study"}</span>
-                <span className="transition-transform duration-300 group-hover:translate-x-2">→</span>
-              </button>
+        <motion.h3 
+          layoutId={`project-title-${project.number}`}
+          className="font-display text-4xl md:text-6xl font-bold mb-4 text-white group-hover:text-primary transition-colors duration-300 leading-tight tracking-tight"
+        >
+          {project.title}
+        </motion.h3>
+        
+        <motion.p 
+          layoutId={`project-role-${project.number}`}
+          className="text-primary/90 text-sm md:text-base font-bold uppercase tracking-[0.2em] mb-8"
+        >
+          {project.role}
+        </motion.p>
+        
+        <p className="text-white/80 leading-relaxed text-lg md:text-xl max-w-4xl font-medium mb-10 group-hover:text-white transition-colors">
+          {project.description}
+        </p>
+
+        <div className="flex flex-wrap items-center justify-between gap-8 mt-4">
+          <div className="flex gap-3 flex-wrap">
+            {project.tags?.map((tag: string, i: number) => (
+              <span key={i} className="text-[10px] uppercase font-bold tracking-widest text-white/40 border border-white/10 px-4 py-2 rounded-xl backdrop-blur-sm">
+                {tag}
+              </span>
+            ))}
+          </div>
+          <div className="text-white text-sm font-bold flex items-center gap-5 transition-all duration-300 bg-white/10 backdrop-blur-xl border border-white/20 hover:border-primary group-hover:bg-primary px-10 py-5 rounded-[1.5rem] shadow-2xl">
+            <span>{lang === "es" ? "Ver Case Study" : "View Case Study"}</span>
+            <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-2 group-hover:bg-white/20">
+              <ChevronRight className="w-5 h-5" />
             </div>
           </div>
         </div>
-      </DialogTrigger>
+      </div>
+    </motion.div>
+  );
+};
 
-      <DialogContent className="w-[100vw] h-[100dvh] max-w-none m-0 p-0 rounded-none border-none bg-background overflow-y-auto block z-[100]">
-        <DialogTitle className="sr-only">{project.title}</DialogTitle>
-        <DialogDescription className="sr-only">{project.description}</DialogDescription>
+const FullProjectView = ({ project, onClose }: { project: any, onClose: () => void }) => {
+  const { lang } = useLanguage();
 
-        <DialogClose className="fixed right-4 top-4 md:right-8 md:top-8 bg-black/10 hover:bg-coral text-foreground hover:text-white p-3 md:p-4 rounded-full transition-all z-[110] shadow-sm backdrop-blur">
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = "auto"; };
+  }, []);
+
+  return (
+    <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, transition: { duration: 0.2 } }}
+      className="fixed inset-0 z-[200] bg-background/90 backdrop-blur-sm overflow-y-auto"
+    >
+      <motion.div 
+        initial={{ opacity: 0, y: 50, scale: 0.98 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        exit={{ opacity: 0, y: 20, scale: 0.98, transition: { duration: 0.2 } }}
+        transition={{ type: "spring", damping: 25, stiffness: 300 }}
+        className="relative w-full min-h-screen bg-background"
+      >
+        <button 
+          onClick={onClose}
+          className="fixed right-4 top-4 md:right-8 md:top-8 bg-black/10 hover:bg-primary text-foreground hover:text-white p-3 md:p-4 rounded-full transition-all z-[210] shadow-sm backdrop-blur"
+        >
           <X className="w-6 h-6 md:w-8 md:h-8" />
-        </DialogClose>
+        </button>
 
         <div className="max-w-[1400px] mx-auto px-6 py-20 md:px-16 md:py-32 space-y-16 md:space-y-32">
           
-          {/* Cabecera del Proyecto */}
-          <div className="max-w-5xl animate-fade-up">
-            <span className="inline-block text-coral font-body text-xs md:text-sm font-bold uppercase tracking-[0.2em] mb-6 bg-coral/10 px-4 py-2 rounded-full">
+          <div className="max-w-5xl">
+            <motion.span 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="inline-block text-primary font-body text-xs md:text-sm font-bold uppercase tracking-[0.2em] mb-6 bg-primary/10 px-4 py-2 rounded-full"
+            >
               {project.category}
-            </span>
-            <h2 className="font-display text-4xl sm:text-6xl md:text-8xl font-black mb-8 tracking-tight leading-[1.1]">
+            </motion.span>
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15 }}
+              className="font-display text-4xl sm:text-6xl md:text-8xl font-black mb-8 tracking-tight leading-[1.1]"
+            >
               {project.title}
-            </h2>
+            </motion.h2>
             <div className="flex flex-wrap items-center gap-6 mb-10">
-              <p className="text-coral font-bold tracking-widest uppercase text-sm md:text-base pl-1 border-l-4 border-coral">
+              <motion.p 
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2 }}
+                className="text-primary font-bold tracking-widest uppercase text-sm md:text-base pl-1 border-l-4 border-primary uppercase"
+              >
                 {project.role}
-              </p>
+              </motion.p>
               {project.heroMetric && (
-                <span className="bg-coral text-white text-xs font-bold uppercase tracking-[0.2em] px-4 py-2 rounded-full shadow-lg shadow-coral/20">
+                <span className="bg-primary text-white text-xs font-bold uppercase tracking-[0.2em] px-4 py-2 rounded-full shadow-lg shadow-primary/20">
                   {project.heroMetric}
                 </span>
               )}
@@ -219,9 +268,9 @@ const ProjectCard = ({ project }: { project: any }) => {
             </p>
           </div>
 
-          {/* Comparación de Métricas (Before/After) */}
+          {/* Metrics, Challenge, Strategy, etc. */}
           {project.metricsComparison && (
-            <div className="grid md:grid-cols-[1fr_auto_1fr] items-center gap-8 md:gap-12 bg-secondary/20 p-8 md:p-16 rounded-[2rem] border border-border/50 animate-fade-up" style={{ animationDelay: "100ms" }}>
+            <div className="grid md:grid-cols-[1fr_auto_1fr] items-center gap-8 md:gap-12 bg-secondary/20 p-8 md:p-16 rounded-[2rem] border border-border/50">
               <div className="text-center space-y-4">
                 <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">{lang === "es" ? "Antes" : "Before"}</span>
                 <div className="text-4xl md:text-6xl font-display font-black text-muted-foreground/30">{project.metricsComparison.before.value}</div>
@@ -230,39 +279,37 @@ const ProjectCard = ({ project }: { project: any }) => {
               </div>
               
               <div className="flex justify-center rotate-90 md:rotate-0">
-                <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-coral flex items-center justify-center text-white shadow-xl shadow-coral/30">
+                <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary flex items-center justify-center text-white shadow-xl shadow-primary/30">
                   <ChevronRight className="w-6 h-6 md:w-8 md:h-8" />
                 </div>
               </div>
 
               <div className="text-center space-y-4">
-                <span className="text-xs font-bold uppercase tracking-widest text-coral">{lang === "es" ? "Después" : "After"}</span>
-                <div className="text-4xl md:text-6xl font-display font-black text-coral">{project.metricsComparison.after.value}</div>
+                <span className="text-xs font-bold uppercase tracking-widest text-primary">{lang === "es" ? "Después" : "After"}</span>
+                <div className="text-4xl md:text-6xl font-display font-black text-primary">{project.metricsComparison.after.value}</div>
                 <div className="text-lg font-bold text-foreground">{project.metricsComparison.after.label}</div>
                 <div className="text-sm text-muted-foreground">{project.metricsComparison.after.detail}</div>
               </div>
             </div>
           )}
 
-          {/* Key Metrics Grid */}
           {project.keyMetrics && (
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 animate-fade-up" style={{ animationDelay: "150ms" }}>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
               {project.keyMetrics.map((stat: any, i: number) => (
-                <div key={i} className="bg-charcoal p-8 md:p-10 rounded-[2rem] border border-border shadow-2xl relative overflow-hidden group hover:border-coral/50 transition-colors">
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-coral/5 rounded-bl-full -mr-12 -mt-12 group-hover:bg-coral/10 transition-colors" />
-                  <div className="text-3xl md:text-5xl font-display font-black text-coral mb-2">{stat.value}</div>
+                <div key={i} className="bg-charcoal p-8 md:p-10 rounded-[2rem] border border-border shadow-2xl relative overflow-hidden group hover:border-primary/50 transition-colors">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-full -mr-12 -mt-12 group-hover:bg-primary/10 transition-colors" />
+                  <div className="text-3xl md:text-5xl font-display font-black text-primary mb-2">{stat.value}</div>
                   <div className="text-xs md:text-sm font-bold uppercase tracking-widest text-muted-foreground group-hover:text-foreground transition-colors">{stat.label}</div>
                 </div>
               ))}
             </div>
           )}
 
-          {/* Dos Columnas: Problema y Tareas */}
-          <div className="grid lg:grid-cols-12 gap-12 md:gap-24 animate-fade-up" style={{ animationDelay: "200ms" }}>
+          <div className="grid lg:grid-cols-12 gap-12 md:gap-24">
             <div className="lg:col-span-7 space-y-12">
               <div className="space-y-8">
                 <h4 className="font-display text-sm md:text-base font-bold uppercase tracking-[0.2em] text-foreground opacity-60 flex items-center gap-4">
-                  <span className="w-8 h-[2px] bg-coral" />
+                  <span className="w-8 h-[2px] bg-primary" />
                   {lang === "es" ? "El Problema" : "The Problem"}
                 </h4>
                 <p className="text-muted-foreground text-xl md:text-2xl leading-relaxed font-medium">
@@ -272,13 +319,13 @@ const ProjectCard = ({ project }: { project: any }) => {
 
               <div className="space-y-8">
                 <h4 className="font-display text-sm md:text-base font-bold uppercase tracking-[0.2em] text-foreground opacity-60 flex items-center gap-4">
-                  <span className="w-8 h-[2px] bg-coral" />
+                  <span className="w-8 h-[2px] bg-primary" />
                   {t.projects.whatIDid[lang]}
                 </h4>
                 <ul className="grid sm:grid-cols-1 gap-4">
                   {project.tasks.map((task: string, i: number) => (
                     <li key={i} className="text-muted-foreground text-lg flex items-start gap-4 p-5 rounded-2xl bg-secondary/10 border border-transparent hover:border-border transition-colors">
-                      <span className="w-2 h-2 bg-coral rounded-full mt-2.5 shrink-0" />
+                      <span className="w-2 h-2 bg-primary rounded-full mt-2.5 shrink-0" />
                       {task}
                     </li>
                   ))}
@@ -287,7 +334,6 @@ const ProjectCard = ({ project }: { project: any }) => {
             </div>
             
             <div className="lg:col-span-5 space-y-12">
-              {/* Mi Estrategia */}
               {project.strategy && (
                 <div className="space-y-8">
                   <h4 className="font-display text-sm md:text-base font-bold uppercase tracking-[0.2em] text-foreground opacity-60">
@@ -296,7 +342,7 @@ const ProjectCard = ({ project }: { project: any }) => {
                   <div className="space-y-6">
                     {project.strategy.map((item: any, i: number) => (
                       <div key={i} className="bg-charcoal border border-border p-8 rounded-2xl space-y-3">
-                        <div className="text-coral font-bold text-xs uppercase tracking-widest">0{i + 1}. {item.title}</div>
+                        <div className="text-primary font-bold text-xs uppercase tracking-widest">0{i + 1}. {item.title}</div>
                         <p className="text-foreground/80 text-base leading-relaxed">{item.description}</p>
                       </div>
                     ))}
@@ -304,9 +350,8 @@ const ProjectCard = ({ project }: { project: any }) => {
                 </div>
               )}
 
-              {/* Aprendizaje */}
               <div className="p-8 md:p-10 rounded-3xl bg-secondary/30 border border-border relative group overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-coral/5 rounded-bl-full -mr-16 -mt-16 group-hover:bg-coral/10 transition-colors" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-16 -mt-16 group-hover:bg-primary/10 transition-colors" />
                 <h4 className="font-display text-sm font-bold uppercase tracking-[0.2em] text-foreground mb-6 opacity-60">
                   {t.projects.lesson[lang]}
                 </h4>
@@ -317,11 +362,10 @@ const ProjectCard = ({ project }: { project: any }) => {
             </div>
           </div>
 
-          {/* Testimonial o Quote Impactante */}
           {(project.testimonial || project.quote) && (
             project.testimonial ? (
-              <div className="max-w-4xl mx-auto text-center space-y-10 animate-fade-up" style={{ animationDelay: "250ms" }}>
-                <div className="inline-block p-4 rounded-full bg-coral/10 text-coral">
+              <div className="max-w-4xl mx-auto text-center space-y-10">
+                <div className="inline-block p-4 rounded-full bg-primary/10 text-primary">
                   <svg width="40" height="40" viewBox="0 0 40 40" fill="currentColor">
                     <path d="M10 25h5l3-8h-6l2-8h-7l-2 8v8h5zm15 0h5l3-8h-6l2-8h-7l-2 8v8h5z" />
                   </svg>
@@ -330,12 +374,12 @@ const ProjectCard = ({ project }: { project: any }) => {
                   "{project.testimonial.quote}"
                 </blockquote>
                 <div className="space-y-2">
-                  <div className="h-1 w-20 bg-coral mx-auto" />
-                  <p className="text-coral font-bold uppercase tracking-widest text-sm">{project.testimonial.author}</p>
+                  <div className="h-1 w-20 bg-primary mx-auto" />
+                  <p className="text-primary font-bold uppercase tracking-widest text-sm">{project.testimonial.author}</p>
                 </div>
               </div>
             ) : (
-              <blockquote className="my-16 max-w-4xl mx-auto bg-gradient-to-br from-coral to-[#ff8f8f] text-white p-8 md:p-12 rounded-[3rem] shadow-[0_30px_60px_rgba(255,107,107,0.3)] transform hover:scale-[1.01] transition-transform duration-500 animate-fade-up text-center" style={{ animationDelay: "250ms" }}>
+              <blockquote className="my-16 max-w-4xl mx-auto bg-gradient-to-br from-primary to-[#ff8f8f] text-white p-8 md:p-12 rounded-[3rem] shadow-[0_30px_60px_rgba(255,107,107,0.3)] transform hover:scale-[1.01] transition-transform duration-500 text-center">
                 <p className="font-display text-2xl md:text-4xl font-bold leading-tight md:leading-[1.3]">
                   "{project.quote}"
                 </p>
@@ -343,16 +387,15 @@ const ProjectCard = ({ project }: { project: any }) => {
             )
           )}
 
-          {/* Enlaces Orgánicos */}
           {project.links && (
-            <div className="flex flex-wrap justify-center gap-4 pt-4 animate-fade-up" style={{ animationDelay: "300ms" }}>
+            <div className="flex flex-wrap justify-center gap-4 pt-4">
               {project.links.map((link: any) => (
                 <a
                   key={link.url}
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-foreground text-sm font-bold bg-secondary hover:bg-coral hover:text-white px-10 py-5 rounded-full inline-flex items-center gap-3 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border border-border/50 hover:border-coral"
+                  className="text-foreground text-sm font-bold bg-secondary hover:bg-primary hover:text-white px-10 py-5 rounded-full inline-flex items-center gap-3 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border border-border/50 hover:border-primary"
                 >
                   <span className="text-xl leading-none font-light italic">Visit Project</span> {link.label}
                 </a>
@@ -360,25 +403,25 @@ const ProjectCard = ({ project }: { project: any }) => {
             </div>
           )}
 
-          {/* Galerías Multimedia */}
           {project.galleries ? (
             <div className="space-y-32">
               {project.galleries.map((gallery: any, idx: number) => (
                 <ProjectGallery key={idx} title={gallery.title} images={gallery.images} reels={gallery.reels} lang={lang} />
               ))}
             </div>
-          ) : (
+          ) : !project.hideGallery && (
             <ProjectGallery images={project.images} reels={project.reels} lang={lang} />
           )}
 
         </div>
-      </DialogContent>
-    </Dialog>
+      </motion.div>
+    </motion.div>
   );
 };
 
 export const Projects = () => {
   const { lang } = useLanguage();
+  const [selectedProject, setSelectedProject] = useState<any>(null);
   const projects = t.projects.items[lang];
 
   return (
@@ -386,7 +429,7 @@ export const Projects = () => {
       <div className="max-w-[1400px] mx-auto">
         <ScrollReveal>
           <div className="flex flex-col items-center text-center mb-16 md:mb-32">
-            <span className="text-coral font-body text-sm font-bold uppercase tracking-[0.2em] mb-4 bg-coral/10 px-4 py-2 rounded-full inline-block">
+            <span className="text-primary font-body text-sm font-bold uppercase tracking-[0.2em] mb-4 bg-primary/10 px-4 py-2 rounded-full inline-block">
               {t.projects.label[lang]}
             </span>
             <h2 className="font-display text-4xl sm:text-5xl md:text-7xl font-black leading-tight max-w-4xl tracking-tight">
@@ -400,10 +443,20 @@ export const Projects = () => {
             <ProjectCard 
               key={project.number}
               project={project} 
+              onClick={() => setSelectedProject(project)}
             />
           ))}
         </div>
       </div>
+
+      <AnimatePresence>
+        {selectedProject && (
+          <FullProjectView 
+            project={selectedProject} 
+            onClose={() => setSelectedProject(null)} 
+          />
+        )}
+      </AnimatePresence>
     </section>
   );
 };

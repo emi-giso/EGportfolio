@@ -18,7 +18,7 @@ export const BrandMarquee = () => {
           {[...brandsRow1, ...brandsRow1].map((brand, i) => (
             <span
               key={`${brand}-${i}`}
-              className="mx-6 md:mx-10 text-lg md:text-2xl font-display font-bold text-foreground/20 hover:text-coral/60 transition-colors duration-500 cursor-default select-none"
+              className="mx-6 md:mx-10 text-lg md:text-2xl font-display font-bold text-foreground/20 hover:text-primary/60 transition-colors duration-500 cursor-default select-none"
             >
               {brand}
             </span>
@@ -32,7 +32,7 @@ export const BrandMarquee = () => {
           {[...brandsRow2, ...brandsRow2, ...brandsRow2].map((brand, i) => (
             <span
               key={`${brand}-${i}`}
-              className="mx-6 md:mx-10 text-lg md:text-2xl font-display font-bold text-foreground/20 hover:text-coral/60 transition-colors duration-500 cursor-default select-none"
+              className="mx-6 md:mx-10 text-lg md:text-2xl font-display font-bold text-foreground/20 hover:text-primary/60 transition-colors duration-500 cursor-default select-none"
             >
               {brand}
             </span>

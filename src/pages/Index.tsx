@@ -10,6 +10,8 @@ import { Education } from "@/components/Education";
 import { Contact } from "@/components/Contact";
 import { GlobalSpotlight } from "@/components/GlobalSpotlight";
 import { LanguageProvider } from "@/i18n/LanguageContext";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
+import { DownloadWidget } from "@/components/DownloadWidget";
 
 const Index = () => {
   return (
@@ -26,6 +28,8 @@ const Index = () => {
         <Skills />
         <Education />
         <Contact />
+        <ThemeSwitcher />
+        <DownloadWidget />
       </div>
     </LanguageProvider>
   );

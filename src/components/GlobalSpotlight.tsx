@@ -54,7 +54,7 @@ export const GlobalSpotlight = () => {
       className="pointer-events-none fixed inset-0 z-50 transition-opacity duration-500 mix-blend-screen"
       style={{
         opacity: isVisible ? 1 : 0,
-        background: `radial-gradient(${radius}px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(235, 90, 70, ${spotlightOpacity}), transparent 40%)`,
+        background: `radial-gradient(${radius}px circle at ${mousePosition.x}px ${mousePosition.y}px, hsl(var(--primary) / ${spotlightOpacity}), transparent 40%)`,
       }}
     />
   );

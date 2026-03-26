@@ -36,7 +36,7 @@ export const Navbar = () => {
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-12 h-16 md:h-20">
           <a href="#" className="font-display text-lg md:text-xl font-bold tracking-tight text-foreground">
-            Emilia <span className="text-coral italic">Giso</span>
+            Emilia <span className="text-primary italic">Giso</span>
           </a>
 
           {/* Desktop */}
@@ -52,7 +52,7 @@ export const Navbar = () => {
             ))}
             <button
               onClick={toggle}
-              className="ml-2 px-3 py-1.5 text-xs font-bold uppercase tracking-widest border border-border rounded-full text-muted-foreground hover:text-coral hover:border-coral/50 transition-all duration-300 active:scale-[0.95]"
+              className="ml-2 px-3 py-1.5 text-xs font-bold uppercase tracking-widest border border-border rounded-full text-muted-foreground hover:text-primary hover:border-primary/50 transition-all duration-300 active:scale-[0.95]"
             >
               {lang === "es" ? "EN" : "ES"}
             </button>
@@ -62,7 +62,7 @@ export const Navbar = () => {
           <div className="md:hidden flex items-center gap-3">
             <button
               onClick={toggle}
-              className="px-2.5 py-1 text-xs font-bold uppercase tracking-widest border border-border rounded-full text-muted-foreground hover:text-coral transition-colors active:scale-[0.95]"
+              className="px-2.5 py-1 text-xs font-bold uppercase tracking-widest border border-border rounded-full text-muted-foreground hover:text-primary transition-colors active:scale-[0.95]"
             >
               {lang === "es" ? "EN" : "ES"}
             </button>
@@ -97,7 +97,7 @@ export const Navbar = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.08, duration: 0.4 }}
                 onClick={() => setMobileOpen(false)}
-                className="text-2xl font-display font-semibold text-foreground hover:text-coral transition-colors uppercase tracking-widest"
+                className="text-2xl font-display font-semibold text-foreground hover:text-primary transition-colors uppercase tracking-widest"
               >
                 {item.label}
               </motion.a>

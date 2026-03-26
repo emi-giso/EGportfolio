@@ -23,7 +23,7 @@ export const Services = () => {
     <section className="py-24 md:py-32 section-padding border-b border-border/50">
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
-          <p className="text-coral font-body text-sm uppercase tracking-[0.2em] mb-4">
+          <p className="text-primary font-body text-sm uppercase tracking-[0.2em] mb-4">
             {lang === "es" ? "Servicios" : "Services"}
           </p>
         </ScrollReveal>
@@ -40,10 +40,10 @@ export const Services = () => {
             <ScrollReveal key={service.title} delay={i * 0.08} direction={i < 2 ? "left" : "right"}>
               <div className="group bg-card border border-border rounded-2xl p-6 md:p-8 h-full hover-lift relative overflow-hidden">
                 {/* Decorative corner accent */}
-                <div className="absolute top-0 right-0 w-16 h-16 bg-coral/5 rounded-bl-[2rem] group-hover:bg-coral/10 transition-colors duration-500" />
+                <div className="absolute top-0 right-0 w-16 h-16 bg-primary/5 rounded-bl-[2rem] group-hover:bg-primary/10 transition-colors duration-500" />
                 
-                <span className="text-coral text-3xl mb-4 block">{service.icon}</span>
-                <h3 className="font-display text-lg font-bold mb-3 text-foreground group-hover:text-coral transition-colors duration-300">
+                <span className="text-primary text-3xl mb-4 block">{service.icon}</span>
+                <h3 className="font-display text-lg font-bold mb-3 text-foreground group-hover:text-primary transition-colors duration-300">
                   {service.title}
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{service.desc}</p>

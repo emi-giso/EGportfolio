@@ -1,9 +1,11 @@
 export type Lang = "es" | "en";
 
+import { mediaManifest } from "./mediaManifest";
+
 export const t = {
   nav: {
     about: { es: "Sobre mí", en: "About" },
-    projects: { es: "Showcase", en: "Showcase" },
+    projects: { es: "Proyectos", en: "Projects" },
     skills: { es: "Skills", en: "Skills" },
     education: { es: "Formación", en: "Background" },
     contact: { es: "Contacto", en: "Contact" },
@@ -18,7 +20,7 @@ export const t = {
       es: "Estrategia, ejecución y resultados medibles.",
       en: "Strategy, execution and measurable results.",
     },
-    cta1: { es: "Ver showcase", en: "Explore showcase" },
+    cta1: { es: "Ver proyectos", en: "Explore projects" },
     cta2: { es: "Contacto", en: "Get in touch" },
   },
   about: {
@@ -63,7 +65,7 @@ export const t = {
     },
   },
   projects: {
-    label: { es: "Showcase", en: "Showcase" },
+    label: { es: "Proyectos", en: "Projects" },
     heading: {
       es: "Cada marca, un enfoque distinto. Así los abordé.",
       en: "Every brand requires a different approach. Here's how I tackled them.",
@@ -110,8 +112,12 @@ export const t = {
             { label: "@edhasaargentina", url: "https://www.instagram.com/edhasaargentina" },
             { label: "@hablemosdelbros", url: "https://www.instagram.com/hablemosdelbros" }
           ],
-          images: [],
+          images: mediaManifest.RIVERSIDE,
           reels: [
+            "https://www.instagram.com/p/DWCZ491mn4j/",
+            "https://www.instagram.com/p/DVJ2t7hgCCH/",
+            "https://www.instagram.com/p/DUs7qKhDd4r/",
+            "https://www.instagram.com/p/DTivfoujW86/",
             "https://www.instagram.com/p/DVwas5jkc0I/",
             "https://www.instagram.com/p/DVGjFaJkTHz/",
             "https://www.instagram.com/p/DOy7ROBCTBH/",
@@ -154,7 +160,7 @@ export const t = {
           ],
           insight: "El contenido premium funciona cuando deja de intentar 'parecer' lujoso y empieza a mostrar el valor real de la experiencia y el ahorro de tiempo.",
           links: [{ label: "@welojets", url: "https://www.instagram.com/welojets" }],
-          images: ["/EGportfolio/projects/WELO/averiguar avion.jpg", "/EGportfolio/projects/WELO/1 (1).jpg", "/EGportfolio/projects/WELO/EMPTY LEGS.mp4"],
+          images: mediaManifest.WELO,
           reels: [
             "https://www.instagram.com/reel/C3QhQMbO4Br",
             "https://www.instagram.com/reel/C1Pd2RJukmD",
@@ -177,7 +183,8 @@ export const t = {
           challenge: "En la publicidad el ritmo es vertiginoso y la estética lo es todo. El reto es generar contenido que refleje la excelencia técnica de un set en tiempo real.",
           lesson: "Adaptar la voz a cada proyecto sin perder la identidad de la productora. La versatilidad es clave.",
           links: [{ label: "@huincacine", url: "https://www.instagram.com/huincacine" }],
-          images: ["/EGportfolio/projects/HUINCA/20220201_143755.jpg", "/EGportfolio/projects/HUINCA/20220309_174358.jpg", "/EGportfolio/projects/HUINCA/HUINCA CINE 2022.jpg", "/EGportfolio/projects/HUINCA/20220201_153216.mp4"]
+          images: mediaManifest.HUINCA,
+
         },
         {
           number: "04", category: "Community Management · Freelance", title: "Neterwalk · Yamaneat · Grupo Octubre · Festival Wateke", role: "Community Manager Freelance · Marzo 2023 – Presente",
@@ -191,12 +198,20 @@ export const t = {
           ],
           challenge: "Mantener la coherencia de cuatro voces de marca distintas sin perder autenticidad ni eficiencia operativa.",
           lesson: "La organización y los sistemas de trabajo son tan importantes como la creatividad para escalar la gestión de múltiples cuentas.",
-          images: ["/EGportfolio/projects/HUINCA/SHOOTING_HISTORIAS EXPRESS-03.jpg"],
+          images: [
+            "/EGportfolio/projects/HUINCA/Screenshot_20220524-152722_Instagram.jpg",
+            "/EGportfolio/projects/HUINCA/Screenshot_20220524-181902_Instagram.jpg"
+          ],
           galleries: [
             {
               title: "Yamaneat",
               images: [],
-              reels: []
+              reels: [
+                "https://www.instagram.com/p/DWMxJHRkQ8x/",
+                "https://www.instagram.com/p/DVwYk0QEVMN/",
+                "https://www.instagram.com/reel/DUEPY0sgRxa/",
+                "https://www.instagram.com/reel/DWPnBgFka6_/"
+              ]
             },
             {
               title: "Neterwalk",
@@ -217,6 +232,7 @@ export const t = {
           challenge: "En un set de filmación no existe el 'después lo arreglo'. Cada minuto cuenta y cada error tiene un costo directo.",
           lesson: "La producción es comunicación en su forma más directa: se coordinan personas, tiempos, recursos y expectativas.",
           images: ["/EGportfolio/projects/HUINCA/20220201_144049.jpg"],
+          hideGallery: true,
         },
       ],
       en: [
@@ -255,8 +271,12 @@ export const t = {
             { label: "@edhasaargentina", url: "https://www.instagram.com/edhasaargentina" },
             { label: "@hablemosdelbros", url: "https://www.instagram.com/hablemosdelbros" }
           ],
-          images: [],
+          images: mediaManifest.RIVERSIDE,
           reels: [
+            "https://www.instagram.com/p/DWCZ491mn4j/",
+            "https://www.instagram.com/p/DVJ2t7hgCCH/",
+            "https://www.instagram.com/p/DUs7qKhDd4r/",
+            "https://www.instagram.com/p/DTivfoujW86/",
             "https://www.instagram.com/p/DVwas5jkc0I/",
             "https://www.instagram.com/p/DVGjFaJkTHz/",
             "https://www.instagram.com/p/DOy7ROBCTBH/",
@@ -299,7 +319,7 @@ export const t = {
           ],
           insight: "Premium content works when it stops trying to 'look' luxurious and starts showing the real value of the experience and time savings.",
           links: [{ label: "@welojets", url: "https://www.instagram.com/welojets" }],
-          images: ["/EGportfolio/projects/WELO/averiguar avion.jpg", "/EGportfolio/projects/WELO/1 (1).jpg", "/EGportfolio/projects/WELO/EMPTY LEGS.mp4"],
+          images: mediaManifest.WELO,
           reels: [
             "https://www.instagram.com/reel/C3QhQMbO4Br",
             "https://www.instagram.com/reel/C1Pd2RJukmD",
@@ -322,7 +342,7 @@ export const t = {
           challenge: "In advertising, the pace is relentless and aesthetics are everything. The challenge is generating content that reflects technical on-set excellence in real time.",
           lesson: "Adapting voice to each project without losing the production company's identity. Versatility is essential.",
           links: [{ label: "@huincacine", url: "https://www.instagram.com/huincacine" }],
-          images: ["/EGportfolio/projects/HUINCA/20220201_143755.jpg", "/EGportfolio/projects/HUINCA/20220309_174358.jpg", "/EGportfolio/projects/HUINCA/HUINCA CINE 2022.jpg", "/EGportfolio/projects/HUINCA/20220201_153216.mp4"]
+          images: mediaManifest.HUINCA,
         },
         {
           number: "04", category: "Community Management · Freelance", title: "Neterwalk · Yamaneat · Grupo Octubre · Festival Wateke", role: "Freelance Community Manager · March 2023 – Present",
@@ -336,7 +356,10 @@ export const t = {
           ],
           challenge: "Maintaining the coherence of four distinct brand voices without sacrificing authenticity or operational efficiency.",
           lesson: "Organization and workflow systems are as important as creativity when scaling multi-account management.",
-          images: ["/EGportfolio/projects/HUINCA/SHOOTING_HISTORIAS EXPRESS-03.jpg"],
+          images: [
+            "/EGportfolio/projects/HUINCA/Screenshot_20220524-152722_Instagram.jpg",
+            "/EGportfolio/projects/HUINCA/Screenshot_20220524-181902_Instagram.jpg"
+          ],
           links: [
             { label: "@neterwalk", url: "https://www.instagram.com/neterwalk" },
             { label: "@yamaneat", url: "https://www.instagram.com/yamaneat" }
@@ -345,7 +368,12 @@ export const t = {
             {
               title: "Yamaneat",
               images: [],
-              reels: []
+              reels: [
+                "https://www.instagram.com/p/DWMxJHRkQ8x/",
+                "https://www.instagram.com/p/DVwYk0QEVMN/",
+                "https://www.instagram.com/reel/DUEPY0sgRxa/",
+                "https://www.instagram.com/reel/DWPnBgFka6_/"
+              ]
             },
             {
               title: "Neterwalk",
@@ -366,6 +394,7 @@ export const t = {
           challenge: "On a film set, there is no 'I'll fix it later.' Every minute counts, and every mistake has a direct cost.",
           lesson: "Production is communication in its most direct form: coordinating people, timelines, resources and expectations.",
           images: ["/EGportfolio/projects/HUINCA/20220201_144049.jpg"],
+          hideGallery: true,
         },
       ],
     },

@@ -2,22 +2,24 @@ import { motion } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { t } from "@/i18n/translations";
 
+import { Download } from "lucide-react";
+
 export const Hero = () => {
   const { lang } = useLanguage();
 
   return (
     <section className="min-h-screen flex flex-col justify-center relative overflow-hidden section-padding">
-      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full bg-coral/5 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-coral/3 blur-[80px] pointer-events-none" />
+      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full bg-primary/5 blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-primary/3 blur-[80px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto w-full pt-28 pb-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/50 border border-border/50 text-coral text-sm font-medium mb-8 backdrop-blur-sm"
+          className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/50 border border-border/50 text-primary text-sm font-medium mb-8 backdrop-blur-sm"
         >
-          <span className="w-2 h-2 rounded-full bg-coral animate-pulse" />
+          <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
           {t.hero.greeting[lang]}
         </motion.div>
 
@@ -51,7 +53,7 @@ export const Hero = () => {
         >
           <a
             href="#projects"
-            className="group inline-flex items-center gap-2 bg-coral text-primary-foreground px-8 py-4 rounded-xl font-display font-semibold text-sm uppercase tracking-wider hover:bg-coral/90 transition-all duration-300 hover:shadow-[0_0_30px_-5px_hsl(var(--coral))] active:scale-[0.98]"
+            className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-display font-semibold text-sm uppercase tracking-wider hover:bg-primary/90 transition-all duration-300 hover:shadow-[0_0_30px_-5px_hsl(var(--primary))] active:scale-[0.98]"
           >
             {t.hero.cta1[lang]}
             <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
@@ -77,7 +79,7 @@ export const Hero = () => {
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
           className="w-5 h-8 border-2 border-muted-foreground/30 rounded-full flex justify-center pt-1.5"
         >
-          <div className="w-1 h-2 bg-coral rounded-full" />
+          <div className="w-1 h-2 bg-primary rounded-full" />
         </motion.div>
       </motion.div>
     </section>
